@@ -1,5 +1,8 @@
 # Linguagem JULIA
 
+Mini-curso Julia:
+<a href="https://github.com/Daniel-C-Fernandes/Numerico/blob/main/Mini-curso-Julia.ipynb">Linguagem Julia</a>
+
 Tutorial de instalação:
 
 1. <a href="#anaconda-install1">Instalação do Anaconda pelo windows powershell</a>
