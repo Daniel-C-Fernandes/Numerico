@@ -1,0 +1,104 @@
+\documentclass[12pt]{book}
+
+\input preambulo.tex
+
+\begin{document}
+
+\frontmatter
+
+%titlepage
+
+\title{Introdução ao Cálculo Numérico\\\small{Usando a linguagem Julia}\\\small{Daniel Cassimiro}}
+\author{}
+\ifishtml
+\date{\today}
+\else
+\date{\today\vspace{1cm}
+}
+\fi
+\ifishtml
+\else
+\addcontentsline{toc}{chapter}{Capa}
+\fi
+
+\ifishtml
+\else
+\AddToShipoutPicture*{\BackgroundPic}
+\fi
+\maketitle
+
+%\include{organizadores}
+%\include{colaboradores}
+\include{licenca}
+%\include{nota_organizadores}
+%\include{prefacio}
+
+\ifisslide
+\tableofcontents
+\else
+\ifishtml
+\else
+\tableofcontents
+\addcontentsline{toc}{chapter}{Sumário}
+\fi
+\fi
+
+\mainmatter
+
+\include{./cap_intro/cap_intro}
+\include{./cap_aritmetica/cap_aritmetica}
+\include{./cap_equacao1d/cap_equacao1d}
+\include{./cap_linsis/cap_linsis}
+\include{./cap_nlinsis/cap_nlinsis}
+
+%ATENÇÃO ESTE CAPITULO
+%\include{./cap_aproxfun/cap_aproxfun}
+%FOI SEPARADO NOS SEGUINTES
+
+\include{./cap_interp/cap_interp}
+\include{./cap_ajuste/cap_ajuste}
+
+%
+
+%ATENÇÃO ESTE CAPITULO
+%\include{./cap_derint/cap_derint}
+%FOI SEPARADO NOS SEGUINTES
+
+\include{./cap_derivacao/cap_derivacao}
+\include{./cap_integracao/cap_integracao}
+
+%\include{./cap_ajuste/cap_pvc}
+%
+
+\include{./cap_pvi/cap_pvi}
+\include{./cap_pvc/cap_pvc}
+
+\appendix
+\include{./cap_julia/cap_julia} %julia
+
+%resposta dos exercícios
+\ifishtml
+\else
+\include{respostas}
+\fi
+
+%references
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{main}
+\addcontentsline{toc}{chapter}{Referências Bibliográficas}
+\fancyhead[RE]{Cálculo Numérico}
+\fancyhead[LO]{REFERÊNCIAS BIBLIOGRÁFICAS}
+\fancyhead[LE,RO]{\thepage}
+
+\ifishtml
+\else
+\clearpage
+\addcontentsline{toc}{chapter}{Índice Remissivo}
+\fancyhead[RE]{Cálculo Numérico}
+\fancyhead[LO]{ÍNDICE REMISSIVO}
+\fancyhead[LE,RO]{\thepage}
+\printindex
+\fi
+
+\end{document}

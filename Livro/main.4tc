@@ -1,0 +1,302 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{2}{x2-1000}{QQ2-2-1}{Licença}}{6}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{2}{Q1-2-2}{}{Licença}}{vi}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{3}{x3-20001}{QQ2-3-3}{Introdução}}{4}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{4}{x4-30002}{QQ2-4-4}{Representação de números e aritmética de máquina}}{11}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{5}{x5-40002.1}{QQ2-5-5}{Sistema de numeração e mudança de base}}{11}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{5}{x5-50002.1}{QQ2-5-6}{Exercícios resolvidos}}{28}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{5}{x5-60002.1}{QQ2-5-7}{Exercícios}}{32}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{8}{x8-70002.2}{QQ2-8-8}{Notação científica e notação normalizada}}{37}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{8}{x8-80002.2}{QQ2-8-9}{Exercícios resolvidos}}{43}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{8}{x8-90002.2}{QQ2-8-10}{Exercícios}}{43}\relax 
+\doTocEntry\tocsection{2.3}{\csname a:TocLink\endcsname{11}{x11-100002.3}{QQ2-11-11}{Representação decimal finita}}{47}\relax 
+\doTocEntry\tocsubsection{2.3.1}{\csname a:TocLink\endcsname{11}{x11-110002.3.1}{QQ2-11-12}{Arredondamento de números}}{48}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{11}{x11-120002.3.1}{QQ2-11-13}{Exercícios resolvidos}}{58}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{11}{x11-130002.3.1}{QQ2-11-14}{Exercícios}}{59}\relax 
+\doTocEntry\tocsection{2.4}{\csname a:TocLink\endcsname{15}{x15-140002.4}{QQ2-15-15}{Representação de números em máquina}}{63}\relax 
+\doTocEntry\tocsubsection{2.4.1}{\csname a:TocLink\endcsname{15}{x15-150002.4.1}{QQ2-15-16}{Números inteiros}}{64}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{15}{x15-160002.4.1}{QQ2-15-17}{Representação sem sinal}}{64}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{15}{x15-170002.4.1}{QQ2-15-18}{Representação com bit de sinal}}{66}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{15}{x15-180002.4.1}{QQ2-15-19}{Representação complemento de dois}}{67}\relax 
+\doTocEntry\tocsubsection{2.4.2}{\csname a:TocLink\endcsname{15}{x15-190002.4.2}{QQ2-15-20}{Sistema de ponto fixo}}{70}\relax 
+\doTocEntry\tocsubsection{2.4.3}{\csname a:TocLink\endcsname{15}{x15-200002.4.3}{QQ2-15-21}{Sistema de ponto flutuante}}{73}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{15}{x15-210002.4.3}{QQ2-15-22}{O expoente deslocado}}{76}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{15}{x15-220002.4.3}{QQ2-15-23}{Casos especiais}}{81}\relax 
+\doTocEntry\tocsubsection{2.4.4}{\csname a:TocLink\endcsname{15}{x15-230002.4.4}{QQ2-15-24}{Precisão e épsilon de máquina}}{82}\relax 
+\doTocEntry\tocsubsection{2.4.5}{\csname a:TocLink\endcsname{15}{x15-240002.4.5}{QQ2-15-25}{Distribuição dos números}}{84}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{15}{x15-250002.4.5}{QQ2-15-26}{Exercícios}}{85}\relax 
+\doTocEntry\tocsection{2.5}{\csname a:TocLink\endcsname{17}{x17-260002.5}{QQ2-17-27}{Tipos de erros}}{89}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{17}{x17-270002.5}{QQ2-17-28}{Exercícios}}{97}\relax 
+\doTocEntry\tocsection{2.6}{\csname a:TocLink\endcsname{19}{x19-280002.6}{QQ2-19-29}{Erros nas operações elementares}}{103}\relax 
+\doTocEntry\tocsection{2.7}{\csname a:TocLink\endcsname{20}{x20-290002.7}{QQ2-20-30}{Cancelamento catastrófico}}{104}\relax 
+\doTocEntry\tocsection{2.8}{\csname a:TocLink\endcsname{21}{x21-300002.8}{QQ2-21-31}{Condicionamento de um problema}}{114}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{21}{x21-310002.8}{QQ2-21-32}{Exercícios}}{129}\relax 
+\doTocEntry\tocsection{2.9}{\csname a:TocLink\endcsname{22}{x22-320002.9}{QQ2-22-33}{Exemplos selecionados de cancelamento catastrófico}}{132}\relax 
+\doTocEntry\toclof{2.1}{\csname a:TocLink\endcsname{22}{x22-320071}{}{\ignorespaces Gráfico na função do Exemplo~\o:ref {ex:cancelamento_0}.}}{figure}\relax 
+\doTocEntry\toclof{2.2}{\csname a:TocLink\endcsname{22}{x22-320082}{}{\ignorespaces Gráfico de $\o:left: (1+\frac  {1}{n}\o:right: )^n$ em função de $n$ em escala linear-logarítmica variando de $10^0$ até $10^{18}$. Veja o Exemplo~\o:ref {ex:cancelamento_euler}.}}{figure}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{22}{x22-330002.9}{QQ2-22-36}{Exercícios resolvidos}}{150}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{22}{x22-340002.9}{QQ2-22-37}{Exercícios}}{159}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{23}{x23-350003}{QQ2-23-38}{Solução de equações de uma variável}}{170}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{25}{x25-360003.1}{QQ2-25-39}{Existência e unicidade}}{171}\relax 
+\doTocEntry\toclof{3.1}{\csname a:TocLink\endcsname{25}{x25-360081}{}{\ignorespaces Teorema de Bolzano.}}{figure}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{25}{x25-370003.1}{QQ2-25-41}{Exercícios}}{179}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{28}{x28-380003.2}{QQ2-28-42}{Método da bisseção}}{184}\relax 
+\doTocEntry\toclof{3.2}{\csname a:TocLink\endcsname{28}{x28-380032}{}{\ignorespaces Método da bisseção.}}{figure}\relax 
+\doTocEntry\toclot{3.1}{\csname a:TocLink\endcsname{28}{x28-380101}{}{\ignorespaces Iteração do método da bisseção para o Exemplo~\o:ref {ex:metodo_da_bissecao}.}}{table}\relax 
+\doTocEntry\tocsubsection{3.2.1}{\csname a:TocLink\endcsname{28}{x28-390003.2.1}{QQ2-28-45}{Código Scilab: método da bisseção}}{199}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{28}{x28-400003.2.1}{QQ2-28-46}{Exercícios}}{200}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{29}{x29-410003.3}{QQ2-29-47}{Iteração de ponto fixo}}{209}\relax 
+\doTocEntry\toclof{3.3}{\csname a:TocLink\endcsname{29}{x29-410043}{}{\ignorespaces Ponto fixo $g(x^*) = x^*$.}}{figure}\relax 
+\doTocEntry\toclot{3.2}{\csname a:TocLink\endcsname{29}{x29-410212}{}{\ignorespaces Iterações do ponto fixo para o Exemplo~\o:ref {ex:ponto_fixo_2}.}}{table}\relax 
+\doTocEntry\tocsubsection{3.3.1}{\csname a:TocLink\endcsname{29}{x29-420003.3.1}{QQ2-29-50}{Teorema do ponto fixo}}{219}\relax 
+\doTocEntry\toclot{3.3}{\csname a:TocLink\endcsname{29}{x29-420213}{}{\ignorespaces Iteração do ponto fixo para o Exemplo~\o:ref {ex:ponto_fixo_3}.}}{table}\relax 
+\doTocEntry\toclof{3.4}{\csname a:TocLink\endcsname{29}{x29-420234}{}{\ignorespaces Decaimento do erro $\epsilon _n = |x^{(n)}-x^*|$ da iteração do ponto fixo estudada no Exemplo~\o:ref {ex:ponto_fixo_3}.}}{figure}\relax 
+\doTocEntry\tocsubsection{3.3.2}{\csname a:TocLink\endcsname{29}{x29-430003.3.2}{QQ2-29-53}{Teste de convergência}}{233}\relax 
+\doTocEntry\toclof{3.5}{\csname a:TocLink\endcsname{29}{x29-430025}{}{\ignorespaces Ilustração das iterações do ponto fixo para: (esquerda) $y = g_1(x)$ e (direita) $y = g_2(x)$. Veja Exemplo~\o:ref {ex:ponto_fixo_4}.}}{figure}\relax 
+\doTocEntry\tocsubsection{3.3.3}{\csname a:TocLink\endcsname{29}{x29-440003.3.3}{QQ2-29-55}{Estabilidade e convergência}}{238}\relax 
+\doTocEntry\tocsubsection{3.3.4}{\csname a:TocLink\endcsname{29}{x29-450003.3.4}{QQ2-29-56}{Erro absoluto e tolerância}}{241}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{29}{x29-460003.3.4}{QQ2-29-57}{Exercícios}}{246}\relax 
+\doTocEntry\tocsection{3.4}{\csname a:TocLink\endcsname{31}{x31-470003.4}{QQ2-31-58}{Método de Newton-Raphson}}{264}\relax 
+\doTocEntry\tocsubsection{3.4.1}{\csname a:TocLink\endcsname{31}{x31-480003.4.1}{QQ2-31-59}{Interpretação geométrica}}{267}\relax 
+\doTocEntry\toclof{3.6}{\csname a:TocLink\endcsname{31}{x31-480046}{}{\ignorespaces Interpretação do método de Newton.}}{figure}\relax 
+\doTocEntry\tocsubsection{3.4.2}{\csname a:TocLink\endcsname{31}{x31-490003.4.2}{QQ2-31-61}{Análise de convergência}}{271}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{31}{x31-500003.4.2}{QQ2-31-62}{Exercícios}}{281}\relax 
+\doTocEntry\tocsection{3.5}{\csname a:TocLink\endcsname{34}{x34-510003.5}{QQ2-34-63}{Método das secantes}}{294}\relax 
+\doTocEntry\tocsubsection{3.5.1}{\csname a:TocLink\endcsname{34}{x34-520003.5.1}{QQ2-34-64}{Interpretação geométrica}}{296}\relax 
+\doTocEntry\toclof{3.7}{\csname a:TocLink\endcsname{34}{x34-520017}{}{\ignorespaces Método das secantes.}}{figure}\relax 
+\doTocEntry\tocsubsection{3.5.2}{\csname a:TocLink\endcsname{34}{x34-530003.5.2}{QQ2-34-66}{Análise de convergência}}{300}\relax 
+\doTocEntry\tocsection{3.6}{\csname a:TocLink\endcsname{37}{x37-540003.6}{QQ2-37-67}{Critérios de parada}}{315}\relax 
+\doTocEntry\toclot{3.4}{\csname a:TocLink\endcsname{37}{x37-540014}{}{\ignorespaces Quadro comparativo.}}{table}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{37}{x37-550003.6}{QQ2-37-69}{Exercícios}}{318}\relax 
+\doTocEntry\tocsection{3.7}{\csname a:TocLink\endcsname{38}{x38-560003.7}{QQ2-38-70}{Exercícios finais}}{326}\relax 
+\doTocEntry\tocchapter{4}{\csname a:TocLink\endcsname{39}{x39-570004}{QQ2-39-71}{Solução de sistemas lineares}}{343}\relax 
+\doTocEntry\tocsection{4.1}{\csname a:TocLink\endcsname{40}{x40-580004.1}{QQ2-40-72}{Eliminação gaussiana}}{347}\relax 
+\doTocEntry\tocsubsection{4.1.1}{\csname a:TocLink\endcsname{40}{x40-590004.1.1}{QQ2-40-73}{Eliminação gaussiana com pivotamento parcial}}{352}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{40}{x40-600004.1.1}{QQ2-40-74}{Exercícios resolvidos}}{359}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{40}{x40-610004.1.1}{QQ2-40-75}{Exercícios}}{361}\relax 
+\doTocEntry\tocsection{4.2}{\csname a:TocLink\endcsname{41}{x41-620004.2}{QQ2-41-76}{Complexidade de algoritmos em álgebra linear}}{371}\relax 
+\doTocEntry\tocsection{4.3}{\csname a:TocLink\endcsname{44}{x44-630004.3}{QQ2-44-77}{Sistemas triangulares}}{379}\relax 
+\doTocEntry\tocsubsection{4.3.1}{\csname a:TocLink\endcsname{44}{x44-640004.3.1}{QQ2-44-78}{Código Scilab: resolução de um sistema triangular superior}}{381}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{44}{x44-64001}{}{./cap_linsis/codes/scilab/solveU.sci}}{381}\relax 
+\doTocEntry\tocsubsection{4.3.2}{\csname a:TocLink\endcsname{44}{x44-650004.3.2}{QQ2-44-80}{Código Scilab: resolução de um sistema triangular inferior}}{381}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{44}{x44-65001}{}{./cap_linsis/codes/scilab/solveL.sci}}{381}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{44}{x44-660004.3.2}{QQ2-44-82}{Custo computacional}}{381}\relax 
+\doTocEntry\tocsection{4.4}{\csname a:TocLink\endcsname{47}{x47-670004.4}{QQ2-47-83}{Fatoração LU}}{385}\relax 
+\doTocEntry\tocsubsection{4.4.1}{\csname a:TocLink\endcsname{47}{x47-680004.4.1}{QQ2-47-84}{Código Scilab: Fatoração LU}}{391}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{47}{x47-68001}{}{./cap_linsis/codes/scilab/fatoraLU/fatoraLU.sci}}{391}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{47}{x47-690004.4.1}{QQ2-47-86}{Custo computacional}}{392}\relax 
+\doTocEntry\tocsubsection{4.4.2}{\csname a:TocLink\endcsname{47}{x47-700004.4.2}{QQ2-47-87}{Custo computacional para resolver um sistema linear usando fatoração LU}}{394}\relax 
+\doTocEntry\tocsubsection{4.4.3}{\csname a:TocLink\endcsname{47}{x47-710004.4.3}{QQ2-47-88}{Custo para resolver m sistemas lineares}}{396}\relax 
+\doTocEntry\tocsubsection{4.4.4}{\csname a:TocLink\endcsname{47}{x47-720004.4.4}{QQ2-47-89}{Custo para calcular a matriz inversa de $A$}}{398}\relax 
+\doTocEntry\tocsection{4.5}{\csname a:TocLink\endcsname{51}{x51-730004.5}{QQ2-51-90}{Método da matriz tridiagonal}}{400}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{51}{x51-740004.5}{QQ2-51-91}{Código Scilab: Método da matriz tridiagonal}}{412}\relax 
+\doTocEntry\tocsection{4.6}{\csname a:TocLink\endcsname{53}{x53-750004.6}{QQ2-53-92}{Condicionamento de sistemas lineares}}{419}\relax 
+\doTocEntry\tocsubsection{4.6.1}{\csname a:TocLink\endcsname{53}{x53-760004.6.1}{QQ2-53-93}{Norma de vetores}}{420}\relax 
+\doTocEntry\tocsubsection{4.6.2}{\csname a:TocLink\endcsname{53}{x53-770004.6.2}{QQ2-53-94}{Norma de matrizes}}{425}\relax 
+\doTocEntry\tocsubsection{4.6.3}{\csname a:TocLink\endcsname{53}{x53-780004.6.3}{QQ2-53-95}{Número de condicionamento}}{429}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{53}{x53-790004.6.3}{QQ2-53-96}{Exercícios}}{435}\relax 
+\doTocEntry\tocsection{4.7}{\csname a:TocLink\endcsname{54}{x54-800004.7}{QQ2-54-97}{Métodos iterativos para sistemas lineares}}{443}\relax 
+\doTocEntry\tocsubsection{4.7.1}{\csname a:TocLink\endcsname{54}{x54-810004.7.1}{QQ2-54-98}{Método de Jacobi}}{443}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{54}{x54-820004.7.1}{QQ2-54-99}{Código Scilab: Método de Jacobi}}{449}\relax 
+\doTocEntry\tocsubsection{4.7.2}{\csname a:TocLink\endcsname{54}{x54-830004.7.2}{QQ2-54-100}{Método de Gauss-Seidel}}{450}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{54}{x54-840004.7.2}{QQ2-54-101}{Código Scilab: Método de Gauss-Seidel}}{453}\relax 
+\doTocEntry\tocsubsection{4.7.3}{\csname a:TocLink\endcsname{54}{x54-850004.7.3}{QQ2-54-102}{Análise de convergência}}{454}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{54}{x54-860004.7.3}{QQ2-54-103}{Iteração de Jacobi}}{460}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{54}{x54-870004.7.3}{QQ2-54-104}{Iteração de Gauss-Seidel}}{463}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{54}{x54-880004.7.3}{QQ2-54-105}{Condições de convergência}}{466}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{54}{x54-890004.7.3}{QQ2-54-106}{Condição suficiente}}{474}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{54}{x54-900004.7.3}{QQ2-54-107}{Exercícios}}{477}\relax 
+\doTocEntry\tocsection{4.8}{\csname a:TocLink\endcsname{56}{x56-910004.8}{QQ2-56-108}{Cálculo de autovalores e autovetores}}{487}\relax 
+\doTocEntry\tocsubsection{4.8.1}{\csname a:TocLink\endcsname{56}{x56-920004.8.1}{QQ2-56-109}{Método da potência}}{487}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{56}{x56-930001}{QQ2-56-110}{Código Scilab: Método das Potências}}{489}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{56}{x56-940004.8.1}{QQ2-56-111}{Outra análise para a convergência do método}}{495}\relax 
+\doTocEntry\tocsubsection{4.8.2}{\csname a:TocLink\endcsname{56}{x56-950004.8.2}{QQ2-56-112}{Método da iteração inversa}}{499}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{56}{x56-960004.8.2}{QQ2-56-113}{Exercícios resolvidos}}{503}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{56}{x56-970004.8.2}{QQ2-56-114}{Exercícios}}{503}\relax 
+\doTocEntry\tocsection{4.9}{\csname a:TocLink\endcsname{57}{x57-980004.9}{QQ2-57-115}{Exercícios finais}}{507}\relax 
+\doTocEntry\tocchapter{5}{\csname a:TocLink\endcsname{58}{x58-990005}{QQ2-58-116}{Solução de sistemas de equações não lineares}}{517}\relax 
+\doTocEntry\tocsection{5.1}{\csname a:TocLink\endcsname{59}{x59-1000005.1}{QQ2-59-117}{Método de Newton para sistemas}}{523}\relax 
+\doTocEntry\tocsubsection{5.1.1}{\csname a:TocLink\endcsname{59}{x59-1010005.1.1}{QQ2-59-118}{Código Scilab: Newton para sistemas}}{536}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{59}{x59-1020005.1.1}{QQ2-59-119}{Exercícios resolvidos}}{537}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{59}{x59-1030005.1.1}{QQ2-59-120}{Exercícios}}{537}\relax 
+\doTocEntry\toclof{5.1}{\csname a:TocLink\endcsname{59}{x59-1030151}{}{\ignorespaces Reta bitangente a uma curva.}}{figure}\relax 
+\doTocEntry\toclof{5.2}{\csname a:TocLink\endcsname{59}{x59-1030212}{}{\ignorespaces Sistema mecânico com dois segmentos.}}{figure}\relax 
+\doTocEntry\toclof{5.3}{\csname a:TocLink\endcsname{59}{x59-1030263}{}{\ignorespaces intersecção entre duas curvas.}}{figure}\relax 
+\doTocEntry\tocsection{5.2}{\csname a:TocLink\endcsname{60}{x60-1040005.2}{QQ2-60-124}{Linearização de uma função de várias variáveis}}{573}\relax 
+\doTocEntry\tocsubsection{5.2.1}{\csname a:TocLink\endcsname{60}{x60-1050005.2.1}{QQ2-60-125}{Gradiente}}{573}\relax 
+\doTocEntry\tocsubsection{5.2.2}{\csname a:TocLink\endcsname{60}{x60-1060005.2.2}{QQ2-60-126}{Matriz jacobiana}}{579}\relax 
+\doTocEntry\tocchapter{6}{\csname a:TocLink\endcsname{61}{x61-1070006}{QQ2-61-127}{Interpolação}}{588}\relax 
+\doTocEntry\toclof{6.1}{\csname a:TocLink\endcsname{61}{x61-1070041}{}{\ignorespaces Exemplo de interpolação de dois pontos por uma reta, veja o Exemplo~\o:ref {ex:intro_interpolacao}.}}{figure}\relax 
+\doTocEntry\tocsection{6.1}{\csname a:TocLink\endcsname{62}{x62-1080006.1}{QQ2-62-129}{Interpolação polinomial}}{592}\relax 
+\doTocEntry\toclof{6.2}{\csname a:TocLink\endcsname{62}{x62-1080092}{}{\ignorespaces Polinômio interpolador do conjunto de pontos $\{(0, 1)$, $(1, 6)$, $(2, 5)$, $(3, -8)\}$. Veja o Exemplo~\o:ref {ex:interpolacao_polinomial}.}}{figure}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{62}{x62-1090006.1}{QQ2-62-131}{Exercícios resolvidos}}{603}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{62}{x62-1100006.1}{QQ2-62-132}{Exercícios}}{606}\relax 
+\doTocEntry\tocsection{6.2}{\csname a:TocLink\endcsname{65}{x65-1110006.2}{QQ2-65-133}{Diferenças divididas de Newton}}{608}\relax 
+\doTocEntry\toclot{6.1}{\csname a:TocLink\endcsname{65}{x65-1110071}{}{\ignorespaces Esquema de diferenças divididas para um conjunto com três pontos $\{(x_i, y_i)\}_{i=1}^3$.}}{table}\relax 
+\doTocEntry\tocsection{6.3}{\csname a:TocLink\endcsname{66}{x66-1120006.3}{QQ2-66-135}{Polinômios de Lagrange}}{616}\relax 
+\doTocEntry\tocsection{6.4}{\csname a:TocLink\endcsname{67}{x67-1130006.4}{QQ2-67-136}{Aproximação de funções reais por polinômios interpoladores}}{620}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{67}{x67-1140006.4}{QQ2-67-137}{Exercícios}}{629}\relax 
+\doTocEntry\tocsection{6.5}{\csname a:TocLink\endcsname{68}{x68-1150006.5}{QQ2-68-138}{Interpolação linear segmentada}}{630}\relax 
+\doTocEntry\toclof{6.3}{\csname a:TocLink\endcsname{68}{x68-1150073}{}{\ignorespaces Interpolação linear segmentada.}}{figure}\relax 
+\doTocEntry\tocsection{6.6}{\csname a:TocLink\endcsname{69}{x69-1160006.6}{QQ2-69-140}{Interpolação cúbica segmentada - spline}}{637}\relax 
+\doTocEntry\tocsubsection{6.6.1}{\csname a:TocLink\endcsname{69}{x69-1170006.6.1}{QQ2-69-141}{Spline natural}}{644}\relax 
+\doTocEntry\tocsubsection{6.6.2}{\csname a:TocLink\endcsname{69}{x69-1180006.6.2}{QQ2-69-142}{Spline fixado}}{651}\relax 
+\doTocEntry\tocsubsection{6.6.3}{\csname a:TocLink\endcsname{69}{x69-1190006.6.3}{QQ2-69-143}{Spline \textit  {not-a-knot}}}{652}\relax 
+\doTocEntry\tocsubsection{6.6.4}{\csname a:TocLink\endcsname{69}{x69-1200006.6.4}{QQ2-69-144}{Spline periódico}}{655}\relax 
+\doTocEntry\tocchapter{7}{\csname a:TocLink\endcsname{70}{x70-1210007}{QQ2-70-145}{Ajuste de curvas}}{662}\relax 
+\doTocEntry\toclof{7.1}{\csname a:TocLink\endcsname{70}{x70-1210051}{}{\ignorespaces Exemplo de um problema de ajuste de uma reta entre três pontos, veja o Exemplo~\o:ref {ex:intro_ajuste}.}}{figure}\relax 
+\doTocEntry\tocsection{7.1}{\csname a:TocLink\endcsname{71}{x71-1220007.1}{QQ2-71-147}{Ajuste de uma reta}}{666}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{71}{x71-1230007.1}{QQ2-71-148}{Exercício resolvido}}{675}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{71}{x71-1240007.1}{QQ2-71-149}{Exercícios}}{678}\relax 
+\doTocEntry\tocsection{7.2}{\csname a:TocLink\endcsname{72}{x72-1250007.2}{QQ2-72-150}{Ajuste linear geral}}{680}\relax 
+\doTocEntry\toclof{7.2}{\csname a:TocLink\endcsname{72}{x72-1250162}{}{\ignorespaces Gráfico da solução do problema apresentado no Exemplo~\o:ref {ex:ajuste_reta2}.}}{figure}\relax 
+\doTocEntry\toclof{7.3}{\csname a:TocLink\endcsname{72}{x72-1250203}{}{\ignorespaces Gráfico da solução do problema apresentado no Exemplo~\o:ref {ex:ajuste_linear}.}}{figure}\relax 
+\doTocEntry\tocsubsection{7.2.1}{\csname a:TocLink\endcsname{72}{x72-1260007.2.1}{QQ2-72-153}{Ajuste polinomial}}{699}\relax 
+\doTocEntry\toclof{7.4}{\csname a:TocLink\endcsname{72}{x72-1260054}{}{\ignorespaces Gráfico da solução do problema apresentado no Exemplo~\o:ref {ex:ajuste_polinomial}.}}{figure}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{72}{x72-1270007.2.1}{QQ2-72-155}{Exercícios}}{707}\relax 
+\doTocEntry\tocsection{7.3}{\csname a:TocLink\endcsname{74}{x74-1280007.3}{QQ2-74-156}{Aproximando problemas não lineares por problemas lineares}}{710}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{74}{x74-1290007.3}{QQ2-74-157}{Exercícios resolvidos}}{719}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{74}{x74-1300007.3}{QQ2-74-158}{Exercícios}}{721}\relax 
+\doTocEntry\tocchapter{8}{\csname a:TocLink\endcsname{76}{x76-1310008}{QQ2-76-159}{Derivação numérica}}{726}\relax 
+\doTocEntry\tocsection{8.1}{\csname a:TocLink\endcsname{77}{x77-1320008.1}{QQ2-77-160}{Diferenças finitas}}{726}\relax 
+\doTocEntry\toclof{8.1}{\csname a:TocLink\endcsname{77}{x77-1320071}{}{\ignorespaces Erro absoluto das derivadas numéricas no Exemplo~\o:ref {ex:dp}.}}{figure}\relax 
+\doTocEntry\tocsubsection{8.1.1}{\csname a:TocLink\endcsname{77}{x77-1330008.1.1}{QQ2-77-162}{Diferenças finitas via série de Taylor}}{733}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{77}{x77-1340008.1.1}{QQ2-77-163}{Diferença finita progressiva de ordem 1}}{733}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{77}{x77-1350008.1.1}{QQ2-77-164}{Diferença finita regressiva de ordem 1}}{735}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{77}{x77-1360008.1.1}{QQ2-77-165}{Diferença finita central de ordem 2}}{736}\relax 
+\doTocEntry\toclof{8.2}{\csname a:TocLink\endcsname{77}{x77-1360112}{}{\ignorespaces Erro absoluto das derivadas numéricas no Exemplo~\o:ref {ex:derivacao2}.}}{figure}\relax 
+\doTocEntry\tocsubsection{8.1.2}{\csname a:TocLink\endcsname{77}{x77-1370008.1.2}{QQ2-77-167}{Erros de arredondamento}}{743}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{77}{x77-1380008.1.2}{QQ2-77-168}{Exercícios resolvidos}}{749}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{77}{x77-1390008.1.2}{QQ2-77-169}{Exercícios}}{752}\relax 
+\doTocEntry\tocsection{8.2}{\csname a:TocLink\endcsname{82}{x82-1400008.2}{QQ2-82-170}{Diferença finita para derivada segunda}}{758}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{82}{x82-1410008.2}{QQ2-82-171}{Exercícios resolvidos}}{760}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{82}{x82-1420008.2}{QQ2-82-172}{Exercícios}}{761}\relax 
+\doTocEntry\tocsection{8.3}{\csname a:TocLink\endcsname{83}{x83-1430008.3}{QQ2-83-173}{Obtenção de fórmulas por polinômios interpoladores}}{762}\relax 
+\doTocEntry\toclot{8.1}{\csname a:TocLink\endcsname{83}{x83-1430111}{}{\ignorespaces Derivadas numéricas de $f(x) = e^{-x^ 2}$ em $x=1,5$. Veja o Exemplo~\o:ref {ex:varias_formulas}.}}{table}\relax 
+\doTocEntry\tocsubsection{8.3.1}{\csname a:TocLink\endcsname{83}{x83-1440008.3.1}{QQ2-83-175}{Exercícios resolvidos}}{771}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{83}{x83-1450008.3.1}{QQ2-83-176}{Exercícios}}{771}\relax 
+\doTocEntry\tocsection{8.4}{\csname a:TocLink\endcsname{84}{x84-1460008.4}{QQ2-84-177}{Fórmulas de diferenças finitas}}{772}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{84}{x84-1470008.4}{QQ2-84-178}{Exercícios resolvidos}}{777}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{84}{x84-1480008.4}{QQ2-84-179}{Exercícios}}{777}\relax 
+\doTocEntry\tocsection{8.5}{\csname a:TocLink\endcsname{85}{x85-1490008.5}{QQ2-85-180}{Derivada via ajuste ou interpolação}}{780}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{85}{x85-1500008.5}{QQ2-85-181}{Exercícios resolvidos}}{782}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{85}{x85-1510008.5}{QQ2-85-182}{Exercícios}}{782}\relax 
+\doTocEntry\tocsection{8.6}{\csname a:TocLink\endcsname{86}{x86-1520008.6}{QQ2-86-183}{Exercícios finais}}{784}\relax 
+\doTocEntry\tocchapter{9}{\csname a:TocLink\endcsname{87}{x87-1530009}{QQ2-87-184}{Integração numérica}}{789}\relax 
+\doTocEntry\toclof{9.1}{\csname a:TocLink\endcsname{87}{x87-1530041}{}{\ignorespaces Aproximação da integral definida de uma função.}}{figure}\relax 
+\doTocEntry\toclof{9.2}{\csname a:TocLink\endcsname{87}{x87-1530092}{}{\ignorespaces Aproximação por retângulos.}}{figure}\relax 
+\doTocEntry\tocsection{9.1}{\csname a:TocLink\endcsname{89}{x89-1540009.1}{QQ2-89-187}{Somas de Riemann}}{799}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{89}{x89-1550009.1}{QQ2-89-188}{Exercícios resolvidos}}{803}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{89}{x89-1560009.1}{QQ2-89-189}{Exercícios}}{804}\relax 
+\doTocEntry\tocsection{9.2}{\csname a:TocLink\endcsname{90}{x90-1570009.2}{QQ2-90-190}{Regras de Newton-Cotes}}{805}\relax 
+\doTocEntry\tocsubsection{9.2.1}{\csname a:TocLink\endcsname{90}{x90-1580009.2.1}{QQ2-90-191}{Regra do ponto médio}}{807}\relax 
+\doTocEntry\tocsubsection{9.2.2}{\csname a:TocLink\endcsname{90}{x90-1590009.2.2}{QQ2-90-192}{Regra do trapézio}}{809}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{90}{x90-1600009.2.2}{QQ2-90-193}{Erro na regra do trapézio}}{812}\relax 
+\doTocEntry\tocsubsection{9.2.3}{\csname a:TocLink\endcsname{90}{x90-1610009.2.3}{QQ2-90-194}{Regra de Simpson}}{818}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{90}{x90-1620009.2.3}{QQ2-90-195}{Erro na regra de Simpson}}{822}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{90}{x90-1630009.2.3}{QQ2-90-196}{Exercícios resolvidos}}{829}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{90}{x90-1640009.2.3}{QQ2-90-197}{Exercícios}}{830}\relax 
+\doTocEntry\tocsection{9.3}{\csname a:TocLink\endcsname{91}{x91-1650009.3}{QQ2-91-198}{Obtenção das regras de quadratura}}{833}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{91}{x91-1660009.3}{QQ2-91-199}{Exercícios resolvidos}}{838}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{91}{x91-1670009.3}{QQ2-91-200}{Exercícios}}{839}\relax 
+\doTocEntry\tocsection{9.4}{\csname a:TocLink\endcsname{93}{x93-1680009.4}{QQ2-93-201}{Regras compostas}}{840}\relax 
+\doTocEntry\tocsubsection{9.4.1}{\csname a:TocLink\endcsname{93}{x93-1690009.4.1}{QQ2-93-202}{Código Scilab: Regras compostas em geral}}{841}\relax 
+\doTocEntry\tocsubsection{9.4.2}{\csname a:TocLink\endcsname{93}{x93-1700009.4.2}{QQ2-93-203}{Método composto dos trapézios}}{842}\relax 
+\doTocEntry\tocsubsection{9.4.3}{\csname a:TocLink\endcsname{93}{x93-1710009.4.3}{QQ2-93-204}{Código Scilab: trapézio composto}}{844}\relax 
+\doTocEntry\tocsubsection{9.4.4}{\csname a:TocLink\endcsname{93}{x93-1720009.4.4}{QQ2-93-205}{Método composto de Simpson}}{845}\relax 
+\doTocEntry\tocsubsection{9.4.5}{\csname a:TocLink\endcsname{93}{x93-1730009.4.5}{QQ2-93-206}{Código Scilab: Simpson composto}}{846}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{93}{x93-1740009.4.5}{QQ2-93-207}{Exercícios resolvidos}}{848}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{93}{x93-1750009.4.5}{QQ2-93-208}{Exercícios}}{849}\relax 
+\doTocEntry\tocsection{9.5}{\csname a:TocLink\endcsname{95}{x95-1760009.5}{QQ2-95-209}{Método de Romberg}}{854}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{95}{x95-1770009.5}{QQ2-95-210}{Exercícios}}{862}\relax 
+\doTocEntry\tocsection{9.6}{\csname a:TocLink\endcsname{96}{x96-1780009.6}{QQ2-96-211}{Ordem de precisão}}{868}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{96}{x96-1790009.6}{QQ2-96-212}{Exercícios}}{880}\relax 
+\doTocEntry\tocsection{9.7}{\csname a:TocLink\endcsname{97}{x97-1800009.7}{QQ2-97-213}{Quadratura de Gauss-Legendre}}{884}\relax 
+\doTocEntry\toclot{9.1}{\csname a:TocLink\endcsname{97}{x97-1800041}{}{\ignorespaces Nodos e pesos para quadratura de Gauss-Legendre.}}{table}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{97}{x97-1810009.7}{QQ2-97-215}{Mudança de intervalo}}{891}\relax 
+\doTocEntry\tocsubsection{9.7.1}{\csname a:TocLink\endcsname{97}{x97-1820009.7.1}{QQ2-97-216}{Código Scilab: Quadratura gaussiana com $N$ intervalos}}{894}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{97}{x97-1830009.7.1}{QQ2-97-217}{Exercícios resolvidos}}{895}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{97}{x97-1840009.7.1}{QQ2-97-218}{Exercícios}}{896}\relax 
+\doTocEntry\tocsection{9.8}{\csname a:TocLink\endcsname{98}{x98-1850009.8}{QQ2-98-219}{Integrais impróprias}}{898}\relax 
+\doTocEntry\tocsubsection{9.8.1}{\csname a:TocLink\endcsname{98}{x98-1860009.8.1}{QQ2-98-220}{Integrandos com singularidade do tipo $1/(x-a)^n$}}{898}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{98}{x98-1870009.8.1}{QQ2-98-221}{Exercícios resolvidos}}{904}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{98}{x98-1880009.8.1}{QQ2-98-222}{Exercícios}}{905}\relax 
+\doTocEntry\tocsection{9.9}{\csname a:TocLink\endcsname{100}{x100-1890009.9}{QQ2-100-223}{Exercícios finais}}{906}\relax 
+\doTocEntry\tocchapter{10}{\csname a:TocLink\endcsname{101}{x101-19000010}{QQ2-101-224}{Problemas de valor inicial}}{923}\relax 
+\doTocEntry\tocsection{10.1}{\csname a:TocLink\endcsname{102}{x102-19100010.1}{QQ2-102-225}{Rudimentos da teoria de problemas de valor inicial}}{927}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{102}{x102-19200010.1}{QQ2-102-226}{Exercícios resolvidos}}{930}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{102}{x102-19300010.1}{QQ2-102-227}{Exercícios}}{932}\relax 
+\doTocEntry\tocsection{10.2}{\csname a:TocLink\endcsname{104}{x104-19400010.2}{QQ2-104-228}{Método de Euler}}{933}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{104}{x104-19500010.2}{QQ2-104-229}{Exercícios Resolvidos}}{945}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{104}{x104-19600010.2}{QQ2-104-230}{Exercícios}}{950}\relax 
+\doTocEntry\tocsection{10.3}{\csname a:TocLink\endcsname{105}{x105-19700010.3}{QQ2-105-231}{Método de Euler melhorado}}{955}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{105}{x105-19800010.3}{QQ2-105-232}{Exercícios Resolvidos}}{959}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{105}{x105-19900010.3}{QQ2-105-233}{Exercícios}}{964}\relax 
+\doTocEntry\tocsection{10.4}{\csname a:TocLink\endcsname{106}{x106-20000010.4}{QQ2-106-234}{Solução de sistemas de equações diferenciais}}{965}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{106}{x106-20100010.4}{QQ2-106-235}{Exercícios Resolvidos}}{971}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{106}{x106-20200010.4}{QQ2-106-236}{Exercícios}}{975}\relax 
+\doTocEntry\tocsection{10.5}{\csname a:TocLink\endcsname{107}{x107-20300010.5}{QQ2-107-237}{Solução de equações e sistemas de ordem superior}}{976}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{107}{x107-20400010.5}{QQ2-107-238}{Exercícios resolvidos}}{978}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{107}{x107-20500010.5}{QQ2-107-239}{Exercícios}}{982}\relax 
+\doTocEntry\tocsection{10.6}{\csname a:TocLink\endcsname{108}{x108-20600010.6}{QQ2-108-240}{Erro de truncamento}}{986}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{108}{x108-20700010.6}{QQ2-108-241}{Exercícios resolvidos}}{990}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{108}{x108-20800010.6}{QQ2-108-242}{Exercícios}}{990}\relax 
+\doTocEntry\tocsection{10.7}{\csname a:TocLink\endcsname{109}{x109-20900010.7}{QQ2-109-243}{Métodos de Runge-Kutta explícitos}}{994}\relax 
+\doTocEntry\tocsubsection{10.7.1}{\csname a:TocLink\endcsname{109}{x109-21000010.7.1}{QQ2-109-244}{Métodos de Runge-Kutta com dois estágios}}{1000}\relax 
+\doTocEntry\tocsubsection{10.7.2}{\csname a:TocLink\endcsname{109}{x109-21100010.7.2}{QQ2-109-245}{Métodos de Runge-Kutta com três estágios}}{1007}\relax 
+\doTocEntry\tocsubsection{10.7.3}{\csname a:TocLink\endcsname{109}{x109-21200010.7.3}{QQ2-109-246}{Métodos de Runge-Kutta com quatro estágios}}{1010}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{109}{x109-21300010.7.3}{QQ2-109-247}{Exercícios resolvidos}}{1012}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{109}{x109-21400010.7.3}{QQ2-109-248}{Exercícios}}{1016}\relax 
+\doTocEntry\tocsection{10.8}{\csname a:TocLink\endcsname{111}{x111-21500010.8}{QQ2-111-249}{Métodos de Runge-Kutta implícitos}}{1021}\relax 
+\doTocEntry\tocsubsection{10.8.1}{\csname a:TocLink\endcsname{111}{x111-21600010.8.1}{QQ2-111-250}{Método de Euler implícito}}{1022}\relax 
+\doTocEntry\tocsubsection{10.8.2}{\csname a:TocLink\endcsname{111}{x111-21700010.8.2}{QQ2-111-251}{O método trapezoidal}}{1027}\relax 
+\doTocEntry\tocsubsection{10.8.3}{\csname a:TocLink\endcsname{111}{x111-21800010.8.3}{QQ2-111-252}{O método theta}}{1031}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{111}{x111-21900010.8.3}{QQ2-111-253}{Exercícios resolvidos}}{1032}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{111}{x111-22000010.8.3}{QQ2-111-254}{Exercícios}}{1035}\relax 
+\doTocEntry\tocsection{10.9}{\csname a:TocLink\endcsname{112}{x112-22100010.9}{QQ2-112-255}{O método de Taylor}}{1037}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{112}{x112-22200010.9}{QQ2-112-256}{Exercícios resolvidos}}{1039}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{112}{x112-22300010.9}{QQ2-112-257}{Exercícios}}{1040}\relax 
+\doTocEntry\tocsection{10.10}{\csname a:TocLink\endcsname{113}{x113-22400010.10}{QQ2-113-258}{Método de Adams-Bashforth}}{1041}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{113}{x113-22500010.10}{QQ2-113-259}{Exercícios resolvidos}}{1052}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{113}{x113-22600010.10}{QQ2-113-260}{Exercícios}}{1055}\relax 
+\doTocEntry\tocsection{10.11}{\csname a:TocLink\endcsname{114}{x114-22700010.11}{QQ2-114-261}{Método de Adams-Moulton}}{1057}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{114}{x114-22800010.11}{QQ2-114-262}{Exercícios resolvidos}}{1066}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{114}{x114-22900010.11}{QQ2-114-263}{Exercícios}}{1074}\relax 
+\doTocEntry\tocsection{10.12}{\csname a:TocLink\endcsname{115}{x115-23000010.12}{QQ2-115-264}{Método de Adams-Moulton para sistemas lineares}}{1076}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{115}{x115-23100010.12}{QQ2-115-265}{Exercícios resolvidos}}{1078}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{115}{x115-23200010.12}{QQ2-115-266}{Exercícios}}{1078}\relax 
+\doTocEntry\tocsection{10.13}{\csname a:TocLink\endcsname{116}{x116-23300010.13}{QQ2-116-267}{Estratégia preditor-corretor}}{1079}\relax 
+\doTocEntry\tocsubsection{10.13.1}{\csname a:TocLink\endcsname{116}{x116-23400010.13.1}{QQ2-116-268}{Exercícios resolvidos}}{1087}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{116}{x116-23500010.13.1}{QQ2-116-269}{Exercícios}}{1087}\relax 
+\doTocEntry\tocsection{10.14}{\csname a:TocLink\endcsname{117}{x117-23600010.14}{QQ2-117-270}{Problemas rígidos}}{1091}\relax 
+\doTocEntry\tocsection{10.15}{\csname a:TocLink\endcsname{118}{x118-23700010.15}{QQ2-118-271}{Validação e ``Benchmarking''}}{1092}\relax 
+\doTocEntry\tocsection{10.16}{\csname a:TocLink\endcsname{119}{x119-23800010.16}{QQ2-119-272}{Convergência, consistência e estabilidade}}{1104}\relax 
+\doTocEntry\tocsection{10.17}{\csname a:TocLink\endcsname{120}{x120-23900010.17}{QQ2-120-273}{Exercícios finais}}{1105}\relax 
+\doTocEntry\tocchapter{11}{\csname a:TocLink\endcsname{121}{x121-24000011}{QQ2-121-274}{Problemas de valores de contorno}}{1122}\relax 
+\doTocEntry\tocsection{11.1}{\csname a:TocLink\endcsname{122}{x122-24100011.1}{QQ2-122-275}{Método de diferenças finitas}}{1122}\relax 
+\doTocEntry\toclof{11.1}{\csname a:TocLink\endcsname{122}{x122-2410061}{}{\ignorespaces Malha uniforme de $N$ pontos em um intervalo $[a, b]$.}}{figure}\relax 
+\doTocEntry\toclof{11.2}{\csname a:TocLink\endcsname{122}{x122-2410302}{}{\ignorespaces Esboço dos gráficos das soluções analítica (linha) e numérica (pontos) do PVC dado no Exemplo~\o:ref {ex:pvc2}.}}{figure}\relax 
+\doTocEntry\toclot{11.1}{\csname a:TocLink\endcsname{122}{x122-2410341}{}{\ignorespaces Erro absoluto médio das soluções numéricas com $N=11$ e $N=101$ do PVC dado no Exemplo~\o:ref {ex:pvc2}.}}{table}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{122}{x122-24200011.1}{QQ2-122-279}{Exercícios resolvidos}}{1146}\relax 
+\doTocEntry\toclot{11.2}{\csname a:TocLink\endcsname{122}{x122-2420042}{}{\ignorespaces Solução numérica do Exercício~\o:ref {exeresol:pvc_linear}.}}{table}\relax 
+\doTocEntry\toclof{11.3}{\csname a:TocLink\endcsname{122}{x122-2420083}{}{\ignorespaces Esboço do gráfico da solução numérica do Exercício~\o:ref {exeresol:pvc_linear}.}}{figure}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{122}{x122-24300011.1}{QQ2-122-282}{Exercícios}}{1156}\relax 
+\doTocEntry\tocappendix{A}{\csname a:TocLink\endcsname{124}{x124-244000A}{QQ2-124-283}{Rápida introdução ao Python}}{1166}\relax 
+\doTocEntry\tocsection{A.1}{\csname a:TocLink\endcsname{125}{x125-245000A.1}{QQ2-125-284}{Sobre a linguagem Python}}{1166}\relax 
+\doTocEntry\tocsubsection{A.1.1}{\csname a:TocLink\endcsname{125}{x125-246000A.1.1}{QQ2-125-285}{Instalação e execução}}{1167}\relax 
+\doTocEntry\tocsubsection{A.1.2}{\csname a:TocLink\endcsname{125}{x125-247000A.1.2}{QQ2-125-286}{Usando Python}}{1167}\relax 
+\doTocEntry\tocsection{A.2}{\csname a:TocLink\endcsname{127}{x127-248000A.2}{QQ2-127-287}{Elementos da linguagem}}{1176}\relax 
+\doTocEntry\tocsubsection{A.2.1}{\csname a:TocLink\endcsname{127}{x127-249000A.2.1}{QQ2-127-288}{Operações matemáticas elementares}}{1179}\relax 
+\doTocEntry\tocsubsection{A.2.2}{\csname a:TocLink\endcsname{127}{x127-250000A.2.2}{QQ2-127-289}{Funções e constantes elementares}}{1182}\relax 
+\doTocEntry\tocsubsection{A.2.3}{\csname a:TocLink\endcsname{127}{x127-251000A.2.3}{QQ2-127-290}{Operadores lógicos}}{1185}\relax 
+\doTocEntry\tocsection{A.3}{\csname a:TocLink\endcsname{128}{x128-252000A.3}{QQ2-128-291}{Matrizes}}{1188}\relax 
+\doTocEntry\tocsubsection{A.3.1}{\csname a:TocLink\endcsname{128}{x128-253000A.3.1}{QQ2-128-292}{Obtendo dados de uma matriz}}{1191}\relax 
+\doTocEntry\tocsubsection{A.3.2}{\csname a:TocLink\endcsname{128}{x128-254000A.3.2}{QQ2-128-293}{Operações matriciais e elemento-a-elemento}}{1198}\relax 
+\doTocEntry\tocsection{A.4}{\csname a:TocLink\endcsname{129}{x129-255000A.4}{QQ2-129-294}{Estruturas de ramificação e repetição}}{1203}\relax 
+\doTocEntry\tocsubsection{A.4.1}{\csname a:TocLink\endcsname{129}{x129-256000A.4.1}{QQ2-129-295}{A instrução de ramificação ``if''}}{1203}\relax 
+\doTocEntry\tocsubsection{A.4.2}{\csname a:TocLink\endcsname{129}{x129-257000A.4.2}{QQ2-129-296}{A instrução de repetição ``for''}}{1204}\relax 
+\doTocEntry\tocsubsection{A.4.3}{\csname a:TocLink\endcsname{129}{x129-258000A.4.3}{QQ2-129-297}{A instrução de repetição ``while''}}{1208}\relax 
+\doTocEntry\tocsection{A.5}{\csname a:TocLink\endcsname{130}{x130-259000A.5}{QQ2-130-298}{Funções}}{1210}\relax 
+\doTocEntry\tocsection{A.6}{\csname a:TocLink\endcsname{131}{x131-260000A.6}{QQ2-131-299}{Gráficos}}{1215}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{132}{x132-261000A.6}{QQ2-132-300}{Refer\^encias Bibliogr\'aficas}}{1220}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{132}{Q1-132-301}{}{Referências Bibliográficas}}{1222}\relax 
