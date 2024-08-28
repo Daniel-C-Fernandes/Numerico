@@ -105,16 +105,22 @@
   columns=fullflexible,
   otherkeywords = {>},
   morekeywords=[2]{julia, >},
-  keywordstyle=[2]{\color{green!50!black}},
+  %keywordstyle=[2]{\color{green!50!black}},
+  keywordstyle=[2]{\color{green}},
   xleftmargin=10pt,
   belowskip=-1.0 \baselineskip,
-  texcl=true 
+  texcl=true,
+  inputencoding=utf8,
+  extendedchars=true,
+  literate={á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ê}{{\^e}}1 {ë}{{\"e}}1 {í}{{\'i}}1 {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1 {õ}{{\~o}}1 {ó}{{\'o}}1 {ô}{{\^o}}1 {ú}{{\'u}}1
 }
-
-
-
-
-
+\lstdefinestyle{c}{language=C++,
+                basicstyle=\ttfamily,
+                keywordstyle=\color{blue}\ttfamily,
+                stringstyle=\color{red}\ttfamily,
+                commentstyle=\color{dkgreen}\ttfamily,
+                morecomment=[l][\color{magenta}]{\#}
+}
 %%%% indent first line %%%%
 \usepackage{indentfirst}
 
@@ -206,25 +212,6 @@
   \url{https://github.com/livroscolaborativos/CalculoNumerico}
 \end{center}
 }
-
-\newcommand{\construirScilab}{
-  \begin{center}
-    \begin{tabular}{|c|}\hline
-      Aqui, cabe um código Scilab explicativo. Escreva você mesmo o código.\\
-      Veja como participar da escrita do livro em:\\
-      \url{https://github.com/livroscolaborativos/CalculoNumerico}\\\hline
-    \end{tabular}
-  \end{center}
-}
-\newcommand{\construirOctave}{
-  \begin{center}
-    \begin{tabular}{|c|}\hline
-      Aqui, cabe um código GNU Octave explicativo. Escreva você mesmo o código.\\
-      Veja como participar da escrita do livro em:\\
-      \url{https://github.com/livroscolaborativos/CalculoNumerico}\\\hline
-    \end{tabular}
-  \end{center}
-}
 \newcommand{\construirPython}{
   \begin{center}
     \begin{tabular}{|c|}\hline
@@ -257,14 +244,14 @@
 \newcommand{\Iset}{\ensuremath{\mathbb{I}}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\Zset}{\ensuremath{\mathbb{Z}}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\Nset}{\ensuremath{\mathbb{N}}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newtheorem{teorema}{Teorema}[subsection]
-\newtheorem{obs}[teorema]{Observa\c{c}\~{a}o}
-\newtheorem{defini}[teorema]{Defini\c{c}\~{a}o}
-\newtheorem{prop}[teorema]{Proposi\c{c}\~{a}o}
-\newtheorem{corolario}[teorema]{Corol\'{a}rio}
-\newtheorem{lema}[teorema]{Lema}
-\newtheorem{exercicio}[teorema]{Exerc\'{i}cio}
-\newenvironment{demonstracao}{\noindent{\bf Demonstra\c{c}\~ao:} }{\hfill $\Box$ \newline}
+%\newtheorem{teorema}{Teorema}[subsection]
+%\newtheorem{obs}[teorema]{Observa\c{c}\~{a}o}
+%\newtheorem{defini}[teorema]{Defini\c{c}\~{a}o}
+%\newtheorem{prop}[teorema]{Proposi\c{c}\~{a}o}
+%\newtheorem{corolario}[teorema]{Corol\'{a}rio}
+%\newtheorem{lema}[teorema]{Lema}
+%\newtheorem{exercicio}[teorema]{Exerc\'{i}cio}
+%\newenvironment{demonstracao}{\noindent{\bf Demonstra\c{c}\~ao:} }{\hfill $\Box$ \newline}
 \newenvironment{demontracaosembox}{\noindent{\bf Demonstra\c{c}\~ao:} }{}
 \newenvironment{exemplos}{\noindent {\bf Exemplos:} }{\hfill $\Box$ \newline}
 \newenvironment{exemplo}{\vspace{12pt} \noindent{\bf Exemplo:} }{\hfill $\Box$ \newline}
@@ -297,5 +284,4 @@
 \input preambulo_html.tex
 \else
 \input preambulo_book.tex
-\fi
 \fi

@@ -2,22 +2,63 @@
 
 \chapter{Rápida introdução à linguagem Julia}\label{cap:julia}\index{Julia}
 
-Neste apêndice, discutiremos os principais aspectos da linguagem computacional \verb+Julia+ que são essenciais para uma boa leitura deste livro.
+Neste apêndice, abordaremos a linguagem computacional \verb+Julia+ que nos auxiliará no processo de obtenção de resultados de operações e computações utilizando o computador.
 
 \section{Sobre a linguagem Julia}\index{Julia!sobre}
+
+A linguagem de programação Julia é uma linguagem moderna e poderosa que foi criada para atender aos requisitos da computação numérica de alto desempenho e científica.
+Seus criadores quiseram reunir na linguagem as principais (melhores) características de outras linguagens:
+
+\begin{itemize}
+\item Ruby;
+\item matlab;
+\item R;
+\item Julia;
+\item C.
+\end{itemize}
 
 \href{https://julialang.org/}{Julia} é uma linguagem de programação de alto nível, interpretada e multi-paradigma. 
 
 Para mais informações, consulte:
+
 \begin{itemize}
 \item Página oficial da linguagem Julia: \url{https://julialang.org/}
 \item Manual Julia: \url{https://docs.julialang.org/en/v1/manual/getting-started/}
+\item GitHub do Professor Daniel: \url{https://github.com/Daniel-C-Fernandes/Numerico/blob/main/Mini-curso-Julia.ipynb}
 \item Julia Academy: \url{https://juliaacademy.com/}
 \item GitHub Julia: \url{https://github.com/JuliaLang/julia}
 \item Introdução: \url{https://julia.vento.eng.br/}
 \item Curso Julia USP: \url{https://edisciplinas.usp.br/pluginfile.php/7879038/mod_resource/content/4/Tutorial%20para%20a%20Linguagem%20Julia.pdf}
 \item Tutoriais Julia: \url{https://julialang.org/learning/tutorials/}
 \end{itemize}
+
+Para saber mais: \url{https://www.youtube.com/watch?v=Xzdg9czOxD8&t=29s}
+
+\subsection{Características Principais}
+
+\begin{itemize}
+\item \textbf{Tipagem Dinâmica:} Suas variáveis podem receber qualquer tipo de dado, e sua sintaxe se aproxima mais da linguagem humana do que da linguagem de máquina.
+
+\item \textbf{Multiparadigma:} Suporta diversos paradigmas de programação, como orientação a objetos e programação funcional.
+
+\item \textbf{Alto Nível:} Possui uma sintaxe expressiva e amigável.
+
+\item \textbf{Gratuita e Open Source:} Julia é distribuída sob a licença MIT.
+
+\item \textbf{Suporte a Unicode e UTF-8:} Permite o uso de símbolos matemáticos durante a escrita de programas. Gerenciador de Pacotes Prático: Facilita a instalação e atualização de pacotes.
+\end{itemize}
+
+Aplicações:
+
+\begin{itemize}
+\item \textbf{Data Science:} Julia é usada para análise de dados e descoberta de conhecimento a partir de grandes conjuntos de dados. Machine Learning: Possui pacotes poderosos para criação de modelos de aprendizado de máquina.
+
+\item \textbf{Computação Científica:} Ideal para construir modelos matemáticos e soluções numéricas.
+
+\item \textbf{Desenvolvimento Geral:} Pode ser aplicada no desenvolvimento de aplicações web, desktop e outras áreas. Em resumo, Julia é uma linguagem versátil que combina alta performance com uma sintaxe amigável, tornando-a uma escolha popular entre cientistas de dados, desenvolvedores e entusiastas da programação.
+\end{itemize}
+
+Visão geral sobre linguagens de programação: Qual a melhor linguagem de programação? Veja \url{https://www.youtube.com/watch?v=DjUB-yVWT2A}.
 
 Para iniciantes, recomendamos o curso EAD gratuito no site \href{https://www.youtube.com/watch?v=0oChN11wf_4}{Goggo dot jl}:
 \begin{center}
@@ -26,179 +67,196 @@ Para iniciantes, recomendamos o curso EAD gratuito no site \href{https://www.you
 
 \subsection{Instalação e execução}\index{Julia!instalação e execução}
 
-Para executar um código \verb+Julia+ é necessário ter instalado um interpretador para a linguagem. No \href{https://julialang.org/downloads/}{site oficial do Julia} estão disponíveis para {\it download} os interpretadores para vários sistemas operacionais, como \verb+Linux+, \verb+Mac OS+ e \verb+Windows+. Além disso, no GitHub do professor, há um tutorial de instalação para a versão Windows do intepretador de linguagem \verb+Julia+.
-
-Para versões \verb+Linux+ \verb+Ubuntu+ ou \verb+Debian+, basta utilizar o comndo a seguir e esperar a instalação:
-\begin{lstlisting}
->>> sudo apt install julia -y
+Para versões \verb+Linux+ \verb+Ubuntu+ ou \verb+Debian+, basta utilizar o comando a seguir e esperar a instalação:
+\begin{lstlisting}[style=c]
+> sudo apt install julia -y
 \end{lstlisting}
 
-Ao longo do texto, assumiremos que o leitor estaja usando um computar rodando \verb+Linux+. Para outros sistemas, pode ser necessário fazer algumas adaptações.
+Para versões \verb+Windows+, utilize o Prompt de comando \verb+PowerShell+ para inserir o comando de instalação a seguir:
+\begin{lstlisting}[style=c]
+> winget install julia -s msstore
+\end{lstlisting}
+
+Execute o modo interativo da linguagem \verb+Julia+ simplesmente digitando o nome da linguagem seguida de Enter:
+
+\begin{lstlisting}[style=c]
+> julia
+\end{lstlisting}
+
+Dessa forma, abre-se o interpretador interativo da linguagem \verb+Julia+. Pode-se então, como primeira interação, realizar uma operação matemática:
+
+\begin{lstlisting}
+julia> 2 + 3
+5
+\end{lstlisting}
+
+No \href{https://julialang.org/downloads/}{site oficial da linguagem Julia} estão disponíveis para {\it download} os interpretadores para os principais sistemas operacionais, \verb+Linux+, \verb+Mac OS+ e \verb+Windows+. 
+
+Além disso, no \href{https://github.com/Daniel-C-Fernandes/Numerico/tree/main}{GitHub do professor Daniel}, há um tutorial de instalação para a versão Windows do intepretador de linguagem \verb+Julia+ juntamente com o ambiente \verb+Jupyter Notebook+ e uma \href{https://github.com/Daniel-C-Fernandes/Numerico/blob/main/Mini-curso-Julia.ipynb}{introdução à linguagem de programação com exemplos}.
 
 \subsection{Usando Julia}\index{Julia!usando}
 
 O uso da linguagem \verb+Julia+ pode ser feito de três formas básicas:
 
 \begin{itemize}
-\item usando um {\bf console Julia} de modo iterativo;
+\item usando um {\bf console Julia} de modo interativo;
 \item executando um código \verb+codigo.jl+ no console \verb+Julia+;
 \item executando um código \verb+Julia+ \verb+codigo.jl+ diretamente no terminal;
 \end{itemize}
 
-\begin{ex}
-  Considere o seguinte pseudocódigo:
-\begin{verbatim}
-s = "Olá, mundo!". (Sem imprimir na tela o resultado.)
-saída(s). (Imprime na tela.)
-\end{verbatim}
-Implemente este pseudocódigo em \verb+Python+: a) usando diretamente um console; b) digitando seu código em um arquivo separado e executando-o no console Python com a função \verb+execfile+.b) digitando seu código em um arquivo separado e executando-o em terminal com o comando \verb+python+.
-\end{ex}
-\begin{sol} Seguem as soluções de cada item:
-  \begin{itemize}
-  \item[a)]  No console temos:
-\begin{verbatim}
->>> s = "Olá, mundo!"
->>> print(s)
-Olá, mundo!
-\end{verbatim}
-Para sair do console, digite:
-\begin{verbatim}
->>> quit()
-\end{verbatim}
-  \item[b)] Abra o editor de texto de sua preferência e digite o código:
-\begin{verbatim}
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+\subsubsection{Execução no terminal de um código salvo em .jl}
 
-s = 'Olá'
-print(s)
-\end{verbatim}
-Salve o arquivo como, por exemplo, \verb+ola.py+. No console \verb+Python+, digite:
-\begin{verbatim}
->>> execfile("ola.py")
-\end{verbatim}
-  \item[c)] Abra o editor de texto de sua preferência e digite o código:
-\begin{verbatim}
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+Para se executar um código diretamente no terminal de comando do sistema operacional, basta escrevermos o código que desejamos em um arquivo texto de extensão \emph{.jl}.
 
-s = 'Olá'
-print(s)
-\end{verbatim}
-Salve o arquivo como, por exemplo, \verb+ola.py+. Em um terminal, digite:
-\begin{verbatim}
-$ python ola.py
-\end{verbatim}
-\end{itemize}
-\end{sol}
+Dessa forma, por exemplo, salvaremos o seguinte código num arquivo chamado \emph{ola.jl}:
 
-\section{Elementos da linguagem}\index{Python!elementos da linguagem}
+\begin{lstlisting}
+  println("Hello world!!")
+\end{lstlisting}
 
-\verb+Python+ é uma linguagem de alto nível, interpretada e dinâmica. Uma variável é criada quando um valor é atribuído a ela. Por exemplo:
-\begin{verbatim}
->>> x=1
->>> y = x * 2.0
-\end{verbatim}
-a variável \verb+x+ recebe o valor \verb+int+ $1$ e, logo após, na segunda linha de comando, a variável \verb+y+ recebe o valor \verb+double+ $2$. Observamos que o símbolo \verb+=+ significa o operador de atribuição não o de igualdade. O operador lógico de igualdade no \verb+Python+ é \verb+==+. Veja os seguintes comandos:
-\begin{verbatim}
->>> print(x,y)
-(1, 2.0)
->>> type(x), type(y)
-(<type 'int'>, <type 'float'>)
-\end{verbatim}
+Após o salvamento, estando o prompt de comando no mesmo diretório do arquivo salvo, basta executarmos o seguinte comando, obtendo-se a resposta que se segue:
+
+\begin{lstlisting}[style=c]
+> julia ola.jl
+Hello world!!
+\end{lstlisting}
+
+\subsubsection{Utilização do Console interativo Julia}
+
+Para executarmos qualquer comando no console interativo da linguagem \verb+Julia+, iniciaremos o console interativo da seguinte forma:
+
+\begin{lstlisting}[style=c]
+> julia
+\end{lstlisting}
+
+Estando o modo interativo rodando no prompt de comando, basta inserirmos o comando desejado e verificar o resultado da saída do comando registrado na linha seguinte do prompt:
+
+\begin{lstlisting}
+julia> println("Hello world!!")
+Hello world!!
+\end{lstlisting}
+
+\subsubsection{Execução no console de um código salvo em .jl}
+
+Para executarmos qualquer um código salvo com extensão \emph{.jl} no console interativo da linguagem \verb+Julia+, iniciaremos o console interativo da seguinte forma:
+
+\begin{lstlisting}[style=c]
+> julia
+\end{lstlisting}
+
+Estando o modo interativo rodando no prompt de comando, basta inserirmos o seguinte comando e verificar o resultado da saída do arquivo registrado na linha seguinte do prompt (observe que o arquivo deve estar localizado em ...):
+
+\begin{lstlisting}
+julia> include ola.jl
+Hello world!!
+\end{lstlisting}
+
+\section{Elementos da linguagem}\index{Julia!elementos da linguagem}
+
+\verb+Julia+ é uma linguagem de alto nível, interpretada e dinâmica. Uma variável é criada quando um valor é atribuído a ela. Por exemplo:
+
+\begin{lstlisting}
+julia> x = 1
+1
+julia> y = x * 2.0
+2.0
+\end{lstlisting}
+
+a variável \verb+x+ recebe o valor \verb+int+ $1$ e, logo após, na segunda linha de comando, a variável \verb+y+ recebe o valor \verb+double+ $2$. Observamos que o símbolo \verb+=+ significa o operador de atribuição não o de igualdade. O operador lógico de igualdade no \verb+Julia+ é \verb+==+. Veja os seguintes comandos:
+
+\begin{lstlisting}
+julia> print(x, "-", y)
+1-2.0
+
+julia> typeof(x), typeof(y)
+(Int64, Float64)
+\end{lstlisting}
 
 Comentários e continuação de linha de comando são usados como no seguinte exemplo:
-\begin{verbatim}
->>> # Isto é um comentário
-...
->>> x = 1 \
-... + 2
->>> print(x)
-3
-\end{verbatim}
 
-\subsection{Operações matemáticas elementares}\index{Python!operações matemáticas}
+\begin{lstlisting}
+julia> # Isto é um comentário
 
-Em \verb+Python+, os operadores matemáticos elementares são os seguintes:
-\begin{verbatim}
-  + adição
-  - subtração
-  * multiplicação
-  / divisão
-  ** potenciação
-\end{verbatim}
+julia> x = 1
+1
 
-Atenção, a operação de divisão se comporta diferente nas versões \verb+Python 2.7+ e \verb+Python 3+. Em \verb+Python 3+, temos:
-\begin{verbatim}
->>> 1/2
-0.5
-\end{verbatim}
-Já, em \verb+Python 2.7+:
-\begin{verbatim}
->>> 1/2
-0
->>> from __future__ import division
->>> 1/2
-0.5
-\end{verbatim}
+julia> print(x)
+1
+\end{lstlisting}
 
-\subsection{Funções e constantes elementares}\index{Python!funções e constantes (math)}
+\subsection{Operações matemáticas elementares}\index{Julia!operações matemáticas}
 
-Várias funções e constantes elementares estão disponíveis no pacote módulo Python \href{https://docs.python.org/3/library/math.html?highlight=math#module-math}{math}. Por exemplo:
-\begin{verbatim}
->>> import math as math
->>> math.cos(math.pi)
+Em \verb+Julia+, os operadores matemáticos elementares são os seguintes:
+\begin{lstlisting}
+  + # adição
+  - # subtração
+  * # multiplicação
+  / # divisão de a por b
+  \ # divisão de b por a
+  % # Resto da divisão euclidiana
+  \div # Quociente inteiro da divisão euclidiana (alt + 246)
+  (ou \div + tab)
+  ^ #potenciação
+  // # Frações
+  exp() #potenciação de base e
+  Log() #Logarítimo Neperiano
+  Log10() #Logarítimo de base 10
+\end{lstlisting}
+
+\subsection{Funções e constantes elementares}\index{Julia!funções e constantes (math)}
+
+Várias funções e constantes elementares estão disponíveis no pacote módulo Julia \href{https://docs.Julia.org/3/library/math.html?highlight=math#module-math}{math}. Por exemplo:
+\begin{lstlisting}[mathescape=true]
+julia> $\pi$  = pi (\pi + tab)
+$\pi$ = 3.1415926535897...
+
+julia> cos($\pi$)
 -1.0
->>> math.exp(1)
+
+julia> exp(1)
 2.718281828459045
->>> math.log(math.exp(1))
+
+julia> log(exp(1))
 1.0
-\end{verbatim}
+\end{lstlisting}
 
-Observamos que \verb+math.log+ é a função logaritmo natural, isto é, $f(x) = \ln(x)$, enquanto que a implementação Python de $f(x) = \log(x)$ é:
-\begin{verbatim}
->>> math.log10(10)
+Observamos que \verb+log+ é a função logaritmo natural, isto é, $f(x) = \ln(x)$, enquanto que a implementação Julia de $f(x) = \log(x)$ é:
+
+\begin{lstlisting}
+julia> log10(10)
 1.0
-\end{verbatim}
-Veja mais na documentação do \href{https://docs.python.org/3/library/math.html?highlight=math#module-math}{módulo math}:
-\begin{verbatim}
->>> help(math)
-\end{verbatim}
+\end{lstlisting}
 
-\subsection{Operadores lógicos}\index{Python!operadores lógicos}
+Veja mais na documentação \href{https://julia-doc-pt-br.readthedocs.io/en/latest/manual/mathematical-operations.html}{Julia}.
 
-Em \verb+Python+, o valor lógico verdadeiro é escrito como \verb+True+ e o valor lógico falso como \verb+False+. Temos os seguintes operadores lógicos disponíveis:
-\begin{verbatim}
-and  e lógico
-or  ou lógico
-not  negação
-== igualdade
-!= diferente
-<  menor que
->  maior que
-<= menor ou igual que
->= maior ou igual que
-\end{verbatim}
+\subsection{Operadores lógicos}\index{Julia!operadores lógicos}
 
-\begin{ex}
-  Se $x=2$, então $x$ é maior ou igual a 1 e menor que 3?
-\end{ex}
-\begin{sol}
-  Em \verb+Python+, temos:
-\begin{verbatim}
->>> x=2
->>> (x >= 1) and (x < 3)
-True
-\end{verbatim}
-\end{sol}
+Em \verb+Julia+, o valor lógico verdadeiro é escrito como \verb+True+ e o valor lógico falso como \verb+False+. Temos os seguintes operadores lógicos disponíveis:
+\begin{lstlisting}
+&&  # e lógico
+||  # ou lógico
+!  # negação
+== # igualdade
+!= # diferente
+<  # menor que
+>  # maior que
+<= # menor ou igual que
+>= # maior ou igual que
+\end{lstlisting}
 
-\section{Matrizes}\index{Python!matrizes (numpy)}
+Veja mais em \url{https://acervolima.com/operadores-em-julia/}.
 
-Em \verb+Python+, temos um ótimo suporte para computação científica com o pacote \href{http://www.numpy.org/}{numpy}. Uma matriz $A = [a_{i,j}]_{i,j=1}^{m,n}$ em Python é definida usando-se a seguinte sintaxe:
-\begin{verbatim}
->>> import numpy as np
->>> A = np.array([[ a11 , a12 , ... , a1n], [...]. [am1 , am2 , ... , amn]])
-\end{verbatim}
+\section{Matrizes}\index{Julia!matrizes (numpy)}
+
+Em \verb+Julia+, temos um ótimo suporte para computação científica com o pacote \href{http://www.numpy.org/}{numpy}. Uma matriz $A = [a_{i,j}]_{i,j=1}^{m,n}$ em Julia é definida usando-se a seguinte sintaxe:
+\begin{lstlisting}[mathescape=true]
+julia> A = [
+          $a_{11}$ $a_{12}$ $\dots$ $a_{1n}$,
+          $a_{21}$ $a_{22}$ $\dots$ $a_{2n}$,
+          $\vdots$
+          $a_{m1}$ $a_{m2}$ $\dots$ $a_{mn}$
+          ]
+\end{lstlisting}
 
 \begin{ex}
   Defina a matriz:
@@ -212,29 +270,31 @@ Em \verb+Python+, temos um ótimo suporte para computação científica com o pa
   \end{equation}
 \end{ex}
 \begin{sol}
-  Em \verb+Python+, digitamos:
-\begin{verbatim}
->>> import numpy as np
->>> A = np.array([[1,2,3],
-...               [4,5,6]])
->>> print(A)
-[[1 2 3]
- [4 5 6]]
-\end{verbatim}
+  Em \verb+Julia+, digitamos:
+\begin{lstlisting}[mathescape=true]
+julia> A = [1 2 3,
+            4 5 6]
+
+julia> print(A)
+2$\times$3 Matrix{Int64}:
+1 2 3
+4 5 6
+\end{lstlisting}
 \end{sol}
 
 A seguinte lista contém uma série de funções que geram matrizes particulares:
-\begin{verbatim}
-numpy.eye      matriz identidade
-numpy.linspace vetor de elementos linearmente espaçados
-numpy.ones     matriz cheia de uns
-numpy.zeros    matriz nula
-\end{verbatim}
+
+\begin{lstlisting}
+eye      # matriz identidade
+linspace # vetor de elementos linearmente espaçados
+ones     # matriz cheia de uns
+zeros    # matriz nula
+\end{lstlisting}
 
 \subsection{Obtendo dados de uma matriz}
 
 A função \verb+numpy.shape+ retorna o tamanho de uma matriz, por exemplo:
-\begin{verbatim}
+\begin{lstlisting}
 >>> A = np.ones((3,2))
 >>> print(A)
 [[ 1.  1.]
@@ -243,28 +303,28 @@ A função \verb+numpy.shape+ retorna o tamanho de uma matriz, por exemplo:
 >>> nl, nc = np.shape(A)
 >>> print(nl,nc)
 (3, 2)
-\end{verbatim}
+\end{lstlisting}
 informando que a matriz \verb+A+ tem três linhas e duas colunas.
 
 Existem vários métodos para acessar os elementos de uma matriz dada \verb+A+:
 \begin{itemize}
 \item a matriz inteira acessa-se com a sintaxe:
-\begin{verbatim}
+\begin{lstlisting}
 A
-\end{verbatim}
+\end{lstlisting}
 \item o elemento da $i$-ésima linha e $j$-ésima coluna acessa-se usando a sintaxe:
-\begin{verbatim}
+\begin{lstlisting}
 A[i,j]
-\end{verbatim}
+\end{lstlisting}
 \item o bloco formado pelas linhas $i_1$, $i_2$ e pelas colunas $j_1$, $j_2$ obtém-se usando a sintaxe:
-\begin{verbatim}
+\begin{lstlisting}
 A[i1:i2, j1:j2]
-\end{verbatim}
+\end{lstlisting}
 \end{itemize}
 
 \begin{ex}
   Veja as seguintes linhas de comando:
-\begin{verbatim}
+\begin{lstlisting}
 >>> from numpy import random
 >>> A = np.random.random((3,4))
 >>> A
@@ -276,23 +336,23 @@ array([[ 0.39235668,  0.30287204,  0.24379253,  0.98866709],
 >>> A[1:3,1:4]
 array([[ 0.99300252,  0.14232844,  0.25604346],
        [ 0.80615392,  0.22418474,  0.13685148]])
-\end{verbatim}
+\end{lstlisting}
 \end{ex}
 
-Definida uma matriz $A$ em Python, as seguintes sintaxes são bastante úteis:
-\begin{verbatim}
+Definida uma matriz $A$ em Julia, as seguintes sintaxes são bastante úteis:
+\begin{lstlisting}
 A[:,:]   toda a matriz
 A[i:j,k] os elementos das linhas i até j (exclusive) da k-ésima coluna
 A[i,j:k] os elementos da i-ésima linha das colunas j até k (exclusive)
 A[i,:]   a i-ésima linha da matriz
 A[:,j]   a j-ésima coluna da matriz
-\end{verbatim}
+\end{lstlisting}
 
-Atenção, os índices em \verb+Python+ iniciam-se em $0$. Assim, o comando \verb+A[1:3,1:4]+ retorna o bloco da matriz $A$ compreendido da segunda à terceira linha e da segunda a quarta coluna desta matriz.
+Atenção, os índices em \verb+Julia+ iniciam-se em $0$. Assim, o comando \verb+A[1:3,1:4]+ retorna o bloco da matriz $A$ compreendido da segunda à terceira linha e da segunda a quarta coluna desta matriz.
 
 \begin{ex}
 Veja as seguintes linhas de comando:
-\begin{verbatim}
+\begin{lstlisting}
 >>> B = np.random.random((4,4))
 >>> B
 array([[ 0.94313432,  0.72650883,  0.55487089,  0.18753526],
@@ -307,13 +367,13 @@ array([[ 0.94313432,  0.72650883,  0.18753526,  0.55487089],
        [ 0.02094937,  0.45726099,  0.8535878 ,  0.51925464],
        [ 0.75948469,  0.95362926,  0.06464183,  0.77942318],
        [ 0.91243198,  0.22775889,  0.14908227,  0.04061536]])
-\end{verbatim}
+\end{lstlisting}
 \end{ex}
 
 \subsection{Operações matriciais e elemento-a-elemento}
 
-Em \verb+Python+ com \verb+numpy+, o operador \verb+*+ opera elemento a elemento. Por exemplo:
-\begin{verbatim}
+Em \verb+Julia+ com \verb+numpy+, o operador \verb+*+ opera elemento a elemento. Por exemplo:
+\begin{lstlisting}
 >>> A = np.array([[1,2],[2,1]]); print(A)
 [[1 2]
  [2 1]]
@@ -323,27 +383,27 @@ Em \verb+Python+ com \verb+numpy+, o operador \verb+*+ opera elemento a elemento
 >>> print(A*B)
 [[2 2]
  [4 1]]
-\end{verbatim}
+\end{lstlisting}
 A multiplicação matricial obtemos com:
-\begin{verbatim}
+\begin{lstlisting}
 >>> C = A.dot(B)
 >>> print(C)
 [[6 3]
  [6 3]]
-\end{verbatim}
+\end{lstlisting}
 
 Aqui, temos as sintaxes análogas entre operações elemento-a-elemento:
-\begin{verbatim}
-+ adição
-- subtração
-* multiplicação
-/ divisão
-** potenciação
-\end{verbatim}
+\begin{lstlisting}
++ # adição
+- # subtração
+* # multiplicação
+/ # divisão
+^ # potenciação
+\end{lstlisting}
 
 \begin{ex}
   Veja as seguintes linhas de comando:
-\begin{verbatim}
+\begin{lstlisting}
 >>> A = np.ones((2,2))
 >>> A
 array([[ 1.,  1.],
@@ -361,21 +421,21 @@ array([[ 4.,  4.],
 >>> A/B
 array([[ 0.5,  0.5],
        [ 0.5,  0.5]])
-\end{verbatim}
+\end{lstlisting}
 \end{ex}
 
-\section{Estruturas de ramificação e repetição}\index{Python!ramificação e repetição}
+\section{Estruturas de ramificação e repetição}\index{Julia!ramificação e repetição}
 
-A linguagem \verb+Python+ contém estruturas de repetição e ramificação padrões de linguagens estruturadas.
+A linguagem \verb+Julia+ contém estruturas de repetição e ramificação padrões de linguagens estruturadas.
 
-\subsection{A instrução de ramificação ``if''}\index{Python!if}
+\subsection{A instrução de ramificação ``if''}\index{Julia!if}
 
 A instrução ``if'' permite executar um pedaço do código somente se uma dada condição for satisfeita.
 
 \begin{ex}
-  Veja o seguinte código Python:
-\begin{verbatim}
-#!/usr/bin/env python
+  Veja o seguinte código Julia:
+\begin{lstlisting}
+#!/usr/bin/env Julia
 # -*- coding: utf-8 -*-
 
 i = 2
@@ -387,97 +447,97 @@ elif (i == 3):
     print("Hello!")
 else:
     print("Ça Va!")
-\end{verbatim}
+\end{lstlisting}
 Qual é a saída apresentada pelo código? Por quê?
 \end{ex}
 
-Observamos que, em \verb+Python+, a identação é obrigatória, pois é ela que defini o escopo da instrução.
+Observamos que, em \verb+Julia+, a identação é obrigatória, pois é ela que defini o escopo da instrução.
 
-\subsection{A instrução de repetição ``for''}\index{Python!for}
+\subsection{A instrução de repetição ``for''}\index{Julia!for}
 
 A instrução \verb+for+ permite que um pedaço de código seja executado repetidamente.
 
 \begin{ex}
   Veja o seguinte código:
-\begin{verbatim}
+\begin{lstlisting}
 for i in range(6):
     print(i)
-\end{verbatim}
+\end{lstlisting}
 Qual é a saída deste código? Por quê?
 \end{ex}
 
 \begin{ex}
   Veja o seguinte código:
-\begin{verbatim}
+\begin{lstlisting}
 import numpy as np
 for i in np.arange(1,8,2):
     print(i)
-\end{verbatim}
+\end{lstlisting}
 Qual é a saída deste código? Por quê?
 \end{ex}
 
 \begin{ex}
   Veja o seguinte código:
-\begin{verbatim}
+\begin{lstlisting}
 for i in np.arange(10,0,-3):
   print(i)
-\end{verbatim}
-O que é mostrado no console do Python?
+\end{lstlisting}
+O que é mostrado no console do Julia?
 \end{ex}
 
 \begin{ex}
   Veja o seguinte código:
-\begin{verbatim}
+\begin{lstlisting}
 import numpy as np
 for i in np.arange(10,1,-3):
     print(i)
-\end{verbatim}
-O que é mostrado no console do Python?
+\end{lstlisting}
+O que é mostrado no console do Julia?
 \end{ex}
 
-\subsection{A instrução de repetição ``while''}\index{Python!while}
+\subsection{A instrução de repetição ``while''}\index{Julia!while}
 
 A instrução \verb+while+ permite que um pedaço de código seja executado repetidamente até que uma dada condição seja satisfeita.
 
 \begin{ex}
-Veja o seguinte código Python:
-\begin{verbatim}
+Veja o seguinte código Julia:
+\begin{lstlisting}
 s = 0
 i = 1
 while (i <= 10):
     s = s + i
     i = i + 1
-\end{verbatim}
+\end{lstlisting}
 Qual é o valor de \verb+s+ ao final da execução? Por quê?
 \end{ex}
 
-\section{Funções}\index{Python!funções}
+\section{Funções}\index{Julia!funções}
 
-Além das muitas funções disponíveis em \verb+Python+ (e os tantos muitos pacotes livres disponíveis), podemos definir nossas próprias funções. Para tanto, existe a instrução \verb+def+. Veja os seguintes exemplos:
+Além das muitas funções disponíveis em \verb+Julia+ (e os tantos muitos pacotes livres disponíveis), podemos definir nossas próprias funções. Para tanto, existe a instrução \verb+def+. Veja os seguintes exemplos:
 
 \begin{ex}
   O seguinte código:
-\begin{verbatim}
+\begin{lstlisting}
 def f(x):
     return x + np.sin(x)
-\end{verbatim}
+\end{lstlisting}
 define a função $f(x) = x + \sen x$.
 
 Observe que $f(\pi) = \pi$. Confirme isso computando:
-\begin{verbatim}
+\begin{lstlisting}
 >>> f(np.pi)
-\end{verbatim}
+\end{lstlisting}
 \end{ex}
 
 \begin{ex}
-  O seguinte código em \verb+Python+:
-\begin{verbatim}
+  O seguinte código em \verb+Julia+:
+\begin{lstlisting}
 def h(x,y):
     if (x < y):
         return y - x
     else:
         return x - y
-\end{verbatim}
+\end{lstlisting}
 define a função:
 \begin{equation}
   h(x,y) = \left\{
@@ -491,7 +551,7 @@ define a função:
 
 \begin{ex}
   O seguinte código:
-\begin{verbatim}
+\begin{lstlisting}
 def J(x):
     y = np.zeros((2,2))
     y[0,0] = 2*x[0]
@@ -501,20 +561,20 @@ def J(x):
     y[1,1] = -x[0]*np.sin(x[0]*x[1])
 
     return y
-\end{verbatim}
+\end{lstlisting}
 define a matriz jacobiana $J(x_1,x_2) := \frac{\p(f_1,f_2)}{\p(x_1,x_2)}$ da função:
 \begin{equation}
   \pmb{f}(x_1,x_2) = (x_1^2 + x_2^2,~\cos(x_1x_2)).
 \end{equation}
 \end{ex}
 
-\section{Gráficos}\index{Python!gráficos}
+\section{Gráficos}\index{Julia!gráficos}
 
-Para criar um esboço do gráfico de uma função de uma variável real $y = f(x)$, podemos usar a biblioteca \verb+Python+ \href{https://matplotlib.org/}{mathplotlib}.A função \verb+matplotlib.pyplot.plot+ faz uma representação gráfica de um conjunto de pontos $\{(x_i, y_i)\}$ fornecidos. Existe uma série de opções para esta função de forma que o usuário pode ajustar várias questões de visualização. Veja a \href{https://matplotlib.org/api/pyplot_api.html?highlight=pyplot.plot#matplotlib.pyplot.plot}{documentação}.
+Para criar um esboço do gráfico de uma função de uma variável real $y = f(x)$, podemos usar a biblioteca \verb+Julia+ \href{https://matplotlib.org/}{mathplotlib}.A função \verb+matplotlib.pyplot.plot+ faz uma representação gráfica de um conjunto de pontos $\{(x_i, y_i)\}$ fornecidos. Existe uma série de opções para esta função de forma que o usuário pode ajustar várias questões de visualização. Veja a \href{https://matplotlib.org/api/pyplot_api.html?highlight=pyplot.plot#matplotlib.pyplot.plot}{documentação}.
 
 \begin{ex}
   Veja as seguintes linhas de código:
-\begin{verbatim}
+\begin{lstlisting}
 >>> import numpy as np
 >>> import matplotlib.pyplot as plt
 >>> def f(x): return x**3 + 1
@@ -524,5 +584,5 @@ Para criar um esboço do gráfico de uma função de uma variável real $y = f(x
 [<matplotlib.lines.Line2D object at 0x7f4f6d153510>]
 >>> plt.grid()
 >>> plt.show()
-\end{verbatim}
+\end{lstlisting}
 \end{ex}

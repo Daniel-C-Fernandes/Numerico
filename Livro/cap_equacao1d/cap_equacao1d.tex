@@ -9,10 +9,7 @@ Neste capítulo, construiremos aproximações numéricas para a solução de \em
 
 Em seguida, exploramos outra abordagem via \emph{iteração do ponto fixo}\index{iteração do ponto fixo}. Desta, obtemos o \emph{método de Newton}\footnote{Sir Isaac Newton, 1642 - 1727, matemático e físico inglês.}\index{método de Newton}, para o qual estudamos aplicações e critérios de convergência. Por fim, apresentamos o \emph{método das secantes}\index{método das secantes} como uma das possíveis variações do método de Newton.
 
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
+
 Ao longo do capítulo, apresentamos algumas computações com \verb+Python+. Nestas, assumiremos o que os seguintes módulos estão carregados:
 \begin{verbatim}
 >>> import numpy as np
@@ -20,6 +17,7 @@ Ao longo do capítulo, apresentamos algumas computações com \verb+Python+. Nes
 >>> import scipy as sp
 >>> from scipy import optimize
 \end{verbatim}
+
 A segunda instrução carrega a biblioteca de computação científica \href{http://www.numpy.org/}{numpy} e a terceira carrega a biblioteca gráfica \href{https://matplotlib.org/}{matplotlib}.
 \fi
 
@@ -62,33 +60,6 @@ Mostre que existe pelo menos uma solução da equação $e^x=x+2$ no intervalo $
 \begin{sol}
 Primeiramente, observamos que resolver a equação $e^x = x+2$ é equivalente a resolver $f(x) = 0$ com $f(x)=e^x-x-2$. Agora, como $f(-2)=e^{-2}>0$ e $f(0)=-1<0$, temos do teorema de Bolzano que existe pelo menos um zero de $f(x)$ no intervalo $(-2, 0)$. E, portanto, existe pelo menos uma solução da equação dada no intervalo $(-2, 0)$.
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-Podemos usar o \verb+Scilab+ para estudar esta função. Por exemplo, podemos definir a função $f(x)$ e computá-la nos extremos do intervalo dado com os seguintes comandos:
-\begin{verbatim}
--->deff('y=f(x)','y=exp(x)-x-2')
--->f(-2),f(0)
- ans  =
-    0.1353353
- ans  =
-  - 1.
-\end{verbatim}
-Alternativamente (e com maior precisão), podemos verificar diretamente o sinal da função nos pontos desejados com comando \verb+sign+:
-\begin{verbatim}
--->sign(f(-2)),sign(f(0))
- ans  =
-    1.
- ans  =
-  - 1.
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 Podemos usar o \verb+GNU Octave+ para estudar esta função. Por exemplo, podemos definir a função $f(x)$ e computá-la nos extremos do intervalo dado com os seguintes comandos:
 \begin{verbatim}
 >> f = @(x) exp(x)-x-2
@@ -103,28 +74,7 @@ Alternativamente (e com maior precisão), podemos verificar diretamente o sinal 
 ans =  1
 ans = -1
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Podemos usar \verb+Python+ para estudar esta função. Por exemplo, podemos definir a função $f(x)$ e computá-la nos extremos do intervalo dado com os seguintes comandos:
-\begin{verbatim}
->>> def f(x): return np.exp(x)-x-2
-...
->>> f(-2),f(0)
-(0.13533528323661281, -1.0)
-\end{verbatim}
-Alternativamente (e com maior precisão), podemos verificar diretamente o sinal da função nos pontos desejados com a função \href{https://docs.scipy.org/doc/numpy/reference/generated/numpy.sign.html?highlight=numpy.sign#numpy.sign}{numpy.sign}:
-\begin{verbatim}
->>> np.sign(f(-2)*f(0))
--1.0
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 \end{sol}
-
 
 Quando procuramos aproximações para zeros de funções, é aconselhável isolar cada raiz em um intervalo. Desta forma, gostaríamos de poder garantir a existência e a unicidade da raiz dentro de um dado intervalo. A seguinte proposição nos fornece condições suficientes para tanto.
 
@@ -137,24 +87,7 @@ Em outras palavras, para garantirmos que exista um único zero de uma dada funç
 \begin{ex}
 No Exemplo~\ref{ex:teorema_de_Bolzano}, mostramos que existe pelo menos um zero de $f(x) = e^{x}-x-2$ no intervalo $(-2,0)$, pois $f(x)$ é contínua e $f(-2)\cdot f(0) < 0$. Agora, observamos que, além disso, $f'(x)=e^x-1$ e, portanto, $f'(x) < 0$ para todo $x\in(-2,0)$. Logo, da Proposição~\ref{prop:existencia_e_unicidade}, temos garantida a existência de um único zero no intervalo dado.
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-Podemos inspecionar o comportamento da função $f(x)= e^x - x - 2$ e de sua derivada fazendo seus gráficos no Scilab. Para tanto, podemos fazer o seguinte teste:
-\begin{verbatim}
--->x = linspace(-2,0,50);
--->deff('y = f(x)','y=exp(x)-x-2')  // define f
--->plot(x,f(x));xgrid               // gráfico de f
--->deff('y = fl(x)','y=exp(x)-1')   // a derivada
--->plot(x,fl(x));xgrid              // gráfico de f'
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 Podemos inspecionar o comportamento da função $f(x)= e^x - x - 2$ e de sua derivada fazendo seus gráficos no \verb+GNU Octave+. Para tanto, podemos fazer o seguinte teste:
 \begin{verbatim}
 >> xx = linspace(-2,0,50);
@@ -165,28 +98,6 @@ f = f(x) = exp(x)-x-2
 fl = f(x) = exp(x)-1
 >> plot(xx,fl(xx)) #gráfico de f'
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Podemos inspecionar o comportamento da função $f(x)= e^x - x - 2$ e de sua derivada fazendo seus gráficos no Python. Para tanto, podemos usar o seguinte código \verb+Python+:
-\begin{verbatim}
->>> def f(x): return np.exp(x)-x-2
-...
->>> xx = np.linspace(-2,0)
->>> plt.plot(xx,f(xx))
->>> plt.grid(); plt.show()
-
->>> def fl(x): return np.exp(x)-1
-...
->>> plt.plot(xx,fl(xx))
->>> plt.grid(); plt.show()
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-\end{ex}
 
 A discussão feita nesta seção, especialmente o teorema de Bolzano, nos fornece os fundamentos para o método da bisseção, o qual discutimos na próxima seção.
 
@@ -301,23 +212,6 @@ Voltamos a verificar o critério de parada acima e, caso não satisfeito, iteram
     \end{tabular}
   \end{table}
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-Usando o \verb+Scilab+ neste exemplo, temos:
-\begin{verbatim}
--->deff('y = f(x)','y = exp(x) - x - 2')
--->a=-2, b=0, x=(a+b)/2, TOL = (b-a)/2, sign(f(a)*f(x))
--->b=x, x=(a+b)/2, TOL = (b-a)/2, sign(f(a)*f(x))
-\end{verbatim}
-  e, assim, sucessivamente. Veja o código completo na Seção~\ref{subsec:codigo_bissecao}.
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 Usando o \verb+GNU Octave+ neste exemplo, temos:
 \begin{verbatim}
 >> f = @(x) exp(x) - x - 2
@@ -335,27 +229,6 @@ TOL =  0.50000
 ans = -1
 \end{verbatim}
 e, assim, sucessivamente. Veja o código completo na Seção~\ref{subsec:codigo_bissecao}.
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Usando \verb+Python+ neste exemplos, temos:
-\begin{verbatim}
->>> def f(x): return np.exp(x) - x - 2
-...
->>> a=-2; b=0; x = (a+b)/2; [a,b,x]
-[-2, 0, -1.0]
->>> [(b-a)/2, np.sign(f(a)*f(x))]
-[1.0, -1.0]
->>> b=x; x=(a+b)/2; [a,b,x]
-[-2, -1.0, -1.5]
->>> [(b-a)/2, np.sign(f(a)*f(x))]
-\end{verbatim}
-e, assim, sucessivamente. Veja o código completo na Seção~\ref{subsec:codigo_bissecao}.
-\fi
-%%%%%%%%%%%%%%%%%%%%
 \end{sol}
 
 Vamos agora discutir sobre a \emph{convergência} do método da bisseção, que é garantida pelo Teorema~\ref{teo:convergencia_bissecao}.
@@ -409,32 +282,6 @@ Isto está de acordo com o experimento numérico realizado naquele exemplo.
 
 O método da bisseção tem a boa propriedade de garantia de convergência, bem como de fornecer uma simples estimativa do erro na aproximação calculada. Entretanto, a taxa de convergência linear é superada por outros métodos. A construção de tais métodos está, normalmente, associada à iteração do ponto fixo, a qual exploramos na próxima seção.
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\subsection{Código Scilab: método da bisseção}\label{subsec:codigo_bissecao}
-
-O seguinte código é uma implementação no \verb+Scilab+ do algoritmo da bisseção. As variáveis de entrada são:
-\begin{itemize}
-\item \verb+f+ - função objetivo
-\item \verb+a+ - extremo esquerdo do intervalo de inspeção $[a, b]$
-\item \verb+b+ - extremo direito do intervalo de inspeção $[a, b]$
-\item \verb+TOL+ - tolerância para o erro absoluto (critério de parada)
-\item \verb+N+ - número máximo de iterações depois da aproximação inicial
-\end{itemize}
-A variável de saída é:
-\begin{itemize}
-\item \verb+p+ - aproximação de uma raiz $x^*$ de \verb+f+, satisfazendo $|p - x^*|< TOL$ ou $f(p) = 0$.
-\end{itemize}
-
-\verbatiminput{./cap_equacao1d/codes/scilab/metodo_da_bissecao/bissecao.sci}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \subsection{Código GNU Octave: método da bisseção}\label{subsec:codigo_bissecao}
 
 O seguinte código é uma implementação no \verb+GNU Octave+ do algoritmo da bisseção. As variáveis de entrada são:
@@ -451,30 +298,6 @@ A variável de saída é:
 \end{itemize}
 
 \verbatiminput{./cap_equacao1d/codes/octave/metodo_da_bissecao/bissecao.m}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-\subsection{Código Python: método da bisseção}\label{subsec:codigo_bissecao}
-
-O seguinte código é uma implementação em \verb+Python+ do algoritmo da bisseção. As variáveis de entrada são:
-\begin{itemize}
-\item \verb+f+ - função objetivo
-\item \verb+a+ - extremo esquerdo do intervalo de inspeção $[a, b]$
-\item \verb+b+ - extremo direito do intervalo de inspeção $[a, b]$
-\item \verb+TOL+ - tolerância para o erro absoluto (critério de parada)
-\item \verb+N+ - número máximo de iterações depois da aproximação inicial
-\end{itemize}
-A variável de saída é:
-\begin{itemize}
-\item \verb+p+ - aproximação de uma raiz $x^*$ de \verb+f+, satisfazendo $|p - x^*|< TOL$ ou $f(p) = 0$.
-\end{itemize}
-
-\verbatiminput{./cap_equacao1d/codes/python/metodo_da_bissecao/bissecao.py}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Exercícios}
 
@@ -705,29 +528,6 @@ tomando $x_1^{(1)} = x_2^{(1)} = 1,7$, obtemos os resultados apresentados na Tab
   \end{tabular}
 \end{table}
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-No \verb+Scilab+, podemos computar as iterações do ponto fixo $x^{(n+1)} = g_1(x^{(n)})$ com o seguinte código:
-\begin{verbatim}
---> deff('y = f(x)', 'y = x*exp(x)-10')
---> deff('y = g1(x)', 'y = x - 0.5*f(x)')
---> x = 1.7;
---> x = g1(x)
-x =
-    2.0471
---> x = g1(x)
-x =
-   -0.88119
-\end{verbatim}
-e, assim, sucessivamente. Itere com a função $g_2(x)$ e verifique a convergência!
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 No \verb+GNU Octave+, podemos computar as iterações do ponto fixo $x^{(n+1)} = g_1(x^{(n)})$ com o seguinte código:
 \begin{verbatim}
 >> f = @(x) x*exp(x)-10
@@ -741,27 +541,7 @@ x =  2.0471
 x = -0.88119
 \end{verbatim}
 e, assim, sucessivamente. Itere com a função $g_2(x)$ e verifique a convergência!
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Em \verb+Python+, podemos computar as iterações do ponto fixo $x^{(n+1)} = g_1(x^{(n)})$ com o seguinte código:
-\begin{verbatim}
->>> def f(x): return x*np.exp(x)-10
-...
->>> def g1(x): return x-0.5*f(x)
-...
->>> x=1.7
->>> x=g1(x);x
-2.0471447170318804
->>> x=g1(x);x
--0.88119413893725618
-\end{verbatim}
-e, assim, sucessivamente. Itere com a função $g_2(x)$ e verifique a convergência!
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 \end{ex}
 % Para responder essas perguntas, devemos formalizar o conceito de ponto fixo. Antes disso, analisemos mais um exemplo:
 
@@ -903,38 +683,6 @@ Para estimar o erro, consideramos $x^* = 0,7390851605$. A Figura~\ref{fig:ex_pon
   \label{fig:ex_ponto_fixo_3}
 \end{figure}
 
-
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-No \verb+Scilab+, podemos computar estas iterações e o erro absoluto com o seguinte código:
-\begin{verbatim}
-//est. da solucao
-deff('y = f(x)', 'y = cos(x)-x')
-xe = fsolve(0.7, f)
-
-#funcao do pto. fixo
-deff('y = g(x)', 'y = cos(x)')
-
-#aprox. inicial
-x0 = 0.7
-eps = abs(x0-xe)
-disp([x0, eps])
-
-for i=2:7
-  x = g(x0)
-  eps = abs(x-xe)
-  disp([x, eps])
-  x0 = x
-end
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 No \verb+GNU Octave+, podemos computar estas iterações e o erro absoluto com o seguinte código:
 \begin{verbatim}
 #est. da solucao
@@ -956,34 +704,6 @@ for i=2:7
   x0 = x;
 endfor
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Em \verb+Python+, podemos computar estas iterações, o erro absoluto com o seguinte código:
-\begin{verbatim}
-#funcao do pto. fixo
-def g(x):
-    return np.cos(x)
-
-#est. da solucao
-xe = sp.optimize.fixed_point(g, 0.7)
-
-#aprox. inicial
-x0 = 0.7
-eps = np.fabs(x0-xe)
-print("x1 =  %.5f, eps =~ %.1e" % (x0, eps))
-
-for i in np.arange(7):
-    x = g(x0);
-    eps = np.fabs(x-xe);
-    print("%s =~ %.5f, eps =~ %.1e" % (('x'+str(i+2)), x, eps))
-    x0 = x
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 \end{sol}
 
 \subsection{Teste de convergência}
@@ -1511,23 +1231,6 @@ Encontre a raiz positiva da função $f(x)=\cos(x)-x^2$ pelo método de Newton i
 \begin{resp}
   raiz:0,82413, processo iterativo: $x^{(n+1)}= x^{(n)}+ \frac{\cos(x)-x^2}{\sin(x)+2x}$
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{verbatim}
--->x=1
--->x=x+(cos(x)-x^2)/(sin(x)+2*x)
--->x=x+(cos(x)-x^2)/(sin(x)+2*x)
--->x=x+(cos(x)-x^2)/(sin(x)+2*x)
--->x=x+(cos(x)-x^2)/(sin(x)+2*x)
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{verbatim}
 >> x=1
 >> x=x+(cos(x)-x^2)/(sin(x)+2*x)
@@ -1535,8 +1238,6 @@ Encontre a raiz positiva da função $f(x)=\cos(x)-x^2$ pelo método de Newton i
 >> x=x+(cos(x)-x^2)/(sin(x)+2*x)
 >> x=x+(cos(x)-x^2)/(sin(x)+2*x)
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 \end{resp}
 
 \begin{exer} Considere o problema de calcular as soluções positivas da equação:
@@ -1550,47 +1251,6 @@ Encontre a raiz positiva da função $f(x)=\cos(x)-x^2$ pelo método de Newton i
 \end{itemize}
 %{\bf Obs:} Alguns alunos encontraram como solução $x_1\approx 1,5707963$ e $x_2 \approx 4,7123890$. O que eles fizeram de errado?
 \end{exer}
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{resp}
-  \begin{itemize}
-\item[a)]Primeiramente, deve-se observar que a função $\tg(x)$ não está definida quando $x$ é um múltiplo ímpar de $\frac{\pi}{2}$, pelo que devemos cuidado nas singularidades. Traçamos o gráfico da função $f(x)=\tg(x)-2x^2$ no \verb+Scilab+ usando os seguintes comandos:
-\begin{verbatim}
--->deff('y=f(x)','y=tan(x)-2*x^2')
--->plot([0:.01:1.3],f)
-\end{verbatim}
-Observamos facilmente uma raiz no intervalo $(0,5, 0,6)$ e outra no intervalo $(1,2, 1,3)$. Como a função $f(x)$ é contínua fora dos pontos de singularidade da tangente, é fácil verificar que existe pelo menos uma solução nos intervalos dados pelo teorema de Bolzano~\ref{teo:teorema_de_Bolzano}:
-\begin{eqnarray}
-f(0,5) &\approx& 0,046302 >0\\
-f(0,6) &\approx& -0,035863 <0\\
-f(1,2) &\approx& -0,30784e-1 <0\\
-f(1,3) &\approx&  0,22210e-1>0\\
-\end{eqnarray}
-Para provar a unicidade da solução em cada intervalo, precisamos mostra que a função é monótona, ou seja, a derivada não muda de sinal em cada intervalo:
-\begin{eqnarray}
-f'(x)=\sec^2(x)-4x=\frac{1}{\cos^2(x)}-4x\leq \frac{1}{\cos^2(0,6)}-4*0,5<0, ~~x\in[ 0,5, 0,6]\\
-f'(x)=\sec^2(x)-4x=\frac{1}{\cos^2(x)}-4x\geq \frac{1}{\cos^2(1,2)}-4*1,3>0, ~~x\in[ 1,2, 1,3]\\
-\end{eqnarray}
-
-% \item[b)]
-% Já isolamos as raízes em intervalos de comprimento $10^{-1}$ e a precisão requerida exige que as isolemos em intervalos de comprimento $2\times 10^{-8}$. Como cada passo da bisseção, confina a raiz em um intervalo com comprimento igual à metade do comprimento do intervalo anterior, temos a seguinte condição para o número de passos $N_p$:
-% \begin{equation} \frac{10^{-1}}{2^N_p}\leq 2\times 10^{-8} \end{equation}
-% isso é equivalente a
-% \begin{equation} N_p\geq \log_2 \frac{10^{-1}}{2\times 10^{-8}}=\log_2 \frac{10^{7}}{2}=7\log_2 10 -1=\frac{7}{\log_10 2}-1\approx 22.22 \end{equation}
-% Como $N_p$ é inteiro, o menor $N_p$ que satisfaz a condição é $23$.
-
-% As raízes obtidas são $0.55970415$ e $1.2703426$.
-
-\item[b)] Para recalcular as raízes pelo método de Newton, basta executar a iteração:
-\begin{equation} x^{(n+1)}=x^{(n)}-\frac{f(x^{(n)})}{f'(x^{(n)}}. \end{equation}
-\end{itemize}
-Em relação à observação, o erro se deveu à falta de cuidado em compreender o problema antes de tentar resolvê-lo, em especial, à falta de observar que a função é descontínua em  múltiplos ímpares de $\frac{\pi}{2}$. Nestes pontos, a função $f(x)$ troca de sinal, mas não passa por zero.
-\end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{exer}\label{new1} Considere a equação
   \begin{equation} e^{-x^2}=x \end{equation}
@@ -2238,6 +1898,4 @@ N-heptano & 9.2535 &2911.32 &-56.51 \\
 
 $1,2285751$, $4,76770758$, $7,88704085$
 
-\end{resp}
-
-%\end{document}
+\end{resp}%\end{document}
