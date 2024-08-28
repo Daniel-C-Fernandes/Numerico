@@ -71,9 +71,49 @@
 \usepackage{upquote}
 \usepackage{lmodern}
 
+\usepackage[usenames]{color}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%% code insert (verbatim) %%%%
 \usepackage{verbatim}
 \usepackage{listings}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{         
+  basicstyle=\small\ttfamily,
+  %basicstyle=\footnotesize,   
+  language=Python,         
+  numbers=left,                   
+  numberstyle=\tiny\color{gray},  
+  stepnumber=1,                             
+  numbersep=5pt,                  
+  %backgroundcolor=\color{white},    
+  showspaces=false,               
+  showstringspaces=false,         
+  showtabs=false,                 
+  frame=single,                   
+  rulecolor=\color{black},        
+  tabsize=2,                      
+  captionpos=b,                   
+  breaklines=true,                
+  breakatwhitespace=false,        
+  title=\lstname,                               
+  keywordstyle=\color{blue},          
+  commentstyle=\color{red},       
+  stringstyle=\color{mauve},    
+  morecomment=[s][\color{blue}]{/**}{*/},
+  columns=fullflexible,
+  otherkeywords = {>},
+  morekeywords=[2]{julia, >},
+  keywordstyle=[2]{\color{green!50!black}},
+  xleftmargin=10pt,
+  belowskip=-1.0 \baselineskip,
+  texcl=true 
+}
+
+
+
+
 
 %%%% indent first line %%%%
 \usepackage{indentfirst}
@@ -114,10 +154,6 @@
 \renewcommand{\sin}{\operatorname{sen}\,}
 \renewcommand{\sinh}{\operatorname{senh}\,}
 \newcommand{\tg}{\operatorname{tg}\,}
-
-\newcommand{\p}{\partial}
-\newcommand{\Dom}{\operatorname{Dom}\,}
-\newcommand{\diag}{\operatorname{diag}\,}
 
 %%%% indexing %%%%
 \usepackage{makeidx}
@@ -198,6 +234,58 @@
     \end{tabular}
   \end{center}
 }
+
+\usepackage{amsmath,amssymb} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsthm} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumerate} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{longtable}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hhline}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pict2e}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{indentfirst} % Identação da primeira linha do capítulo %%%
+\usepackage{hyperref} %% pacote hyperef cria link (e marcador no PDF) %
+% regra de hifeniza\c{c}\~ao das palavras nao acentuadas %%%%%%%%%%%%%%
+\hyphenation{li-vro tes-te cha-ve bi-blio-te-ca con-si-de-ran-do-se ca-sa} %%%%%%%%%%%%%%%%%%%%%%
+% regra de hifeniza\c{c}\~ao para palavras acentuadas: %%%%%%%%%%%%%%%%
+% requer \usepackage[T1]{fontenc} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\hyphenation{co-men-t\'a-rio re-fe-r\^en-cia} %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Cset}{\ensuremath{\mathbb{C}}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Rset}{\ensuremath{\mathbb{R}}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Qset}{\ensuremath{\mathbb{Q}}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Iset}{\ensuremath{\mathbb{I}}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Zset}{\ensuremath{\mathbb{Z}}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Nset}{\ensuremath{\mathbb{N}}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{teorema}{Teorema}[subsection]
+\newtheorem{obs}[teorema]{Observa\c{c}\~{a}o}
+\newtheorem{defini}[teorema]{Defini\c{c}\~{a}o}
+\newtheorem{prop}[teorema]{Proposi\c{c}\~{a}o}
+\newtheorem{corolario}[teorema]{Corol\'{a}rio}
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{exercicio}[teorema]{Exerc\'{i}cio}
+\newenvironment{demonstracao}{\noindent{\bf Demonstra\c{c}\~ao:} }{\hfill $\Box$ \newline}
+\newenvironment{demontracaosembox}{\noindent{\bf Demonstra\c{c}\~ao:} }{}
+\newenvironment{exemplos}{\noindent {\bf Exemplos:} }{\hfill $\Box$ \newline}
+\newenvironment{exemplo}{\vspace{12pt} \noindent{\bf Exemplo:} }{\hfill $\Box$ \newline}
+\newenvironment{exemplosembox}{\vspace{12pt} \noindent {\bf Exemplos:} }{}
+\newenvironment{demteo}{\noindent {\bf Demonstra\c{c}\~{a}o do Teorema}}{\hfill $\Box$ \newline}
+\newenvironment{demlem}{\noindent {\bf Demonstra\c{c}\~{a}o do Lema}}{\hfill $\Box$ \newline}
+
+%\usepackage{afterpage} % executar comando apÃ³s finalizar a pÃ¡gina
+\usepackage{multicol} % permite usar multiplas linhas
+% espessura da linha que separa as colunas (0pt para desabilitar)
+\setlength{\columnseprule}{1pt} 
+% cor da linha que separa as colunas
+\def\columnseprulecolor{\color{white}}
+%\pagestyle{headings}
+\usepackage{lipsum}
+\usepackage{import}
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
 
 %E = 10^
 \def\E#1{\mathrm{E}\!#1\!}

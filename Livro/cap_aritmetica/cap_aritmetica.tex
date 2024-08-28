@@ -59,8 +59,9 @@ Para sistemas de numeração com base $b \geq 10$ é usual utilizar as seguintes
 Ou seja, $(1001,101)_{2}$ é igual a $9,625$ no sistema decimal.
 
 Em \verb+Julia+ podemos converter o número $(1001,101)_2$ para a base decimal computando
+
 \begin{lstlisting}
->>> 1*2^3 + 0*2^2 + 0*2^1 + 1*2^0 + 1*2^-1 + 0*2^-2 + 1*2^-3
+julia> 1*2^3 + 0*2^2 + 0*2^1 + 1*2^0 + 1*2^-1 + 0*2^-2 + 1*2^-3 
 9.625
 \end{lstlisting}
 
@@ -182,8 +183,6 @@ d2 = 0, x = 1
 >>> d3 = x%2; x = int(x/2); print(f"d3 = {d3}, x = {x}")
 d3 = 1, x = 0
 \end{lstlisting}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 
 {\bf Conversão da parte fracionária}. Para converter a parte fracionária, fazemos sucessivas multiplicações por $b=2$ obtendo
 \begin{align}
