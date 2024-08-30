@@ -111,7 +111,9 @@ Verifique no computador!
 >>> string(9,base=2) # dec -> bin
 1001
   \end{lstlisting}
+
 Também é possível usar a função int() para interpretar a representação de um inteiro em uma base com b entre 2 e 36. Por exemplo, temos:
+
 \begin{lstlisting}
 >>> print(int('1001', 2))  # Base 2
 9
@@ -191,37 +193,7 @@ d3 = 1, x = 0
   &= 1\cdot 2^{-1} + (1\cdot 2^{-1})\cdot 2^{-2} = 1\cdot 2^{-1} + 1\cdot 2^{-3}.
 \end{align}
 Ou seja, temos que $0,625 = (0,101)_2$.
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-No \verb+Scilab+, podemos computar esta conversão da parte fracionária da seguinte forma
-\begin{verbatim}
--->x = 0.625
- x  =
-    0.625
--->d = fix(2*x), x = 2*x - d
- d  =
-    1.
- x  =
-    0.25
--->d = fix(2*x), x = 2*x - d
- d  =
-    0.
- x  =
-    0.5
--->d = fix(2*x), x = 2*x - d
- d  =
-    1.
- x  =
-    0.
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 No \verb+GNU Octave+, podemos computar esta conversão da parte fracionária da seguinte forma
 \begin{verbatim}
 >> x = 0.625
@@ -236,52 +208,10 @@ x =  0.50000
 d =  1
 x = 0
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Em \verb+Python+, podemos computar esta conversão da parte fracionária da seguinte forma
-\begin{verbatim}
->>> x=0.625
->>> d = int(2*x); x = 2*x - d; print("d = %d, x = %f" % (d,x))
-d = 1, x = 0.250000
->>> d = int(2*x); x = 2*x - d; print("d = %d, x = %f" % (d,x))
-d = 0, x = 0.500000
->>> d = int(2*x); x = 2*x - d; print("d = %d, x = %f" % (d,x))
-d = 1, x = 0.000000
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 
 {\bf Conclusão.} Da conversão das partes inteira e fracionária de $9,625$, obtemos $9 = (1001)_2$ e $0,625 = (0,101)_2$. Logo, concluímos que $9,625 = (1001,101)_2$.
 \end{ex}
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{obs}
-  O \verb+Scilab+ oferece algumas funções para a conversão de números inteiros em base decimal para uma dada base. Por exemplo, temos:
-\begin{verbatim}
--->dec2base(9,2)
- ans  =
- 1001
--->dec2base(111,8)
- ans  =
- 157
--->dec2base(48826,16)
- ans  =
- BEBA
-\end{verbatim}
-\end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{obs}
   O \verb+GNU Octave+ oferece algumas funções para a conversão de números inteiros em base decimal para uma base dada. Por exemplo, temos:
 \begin{verbatim}
@@ -293,25 +223,7 @@ ans = 157
 ans = BEBA
 \end{verbatim}
 \end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-\begin{obs}
-  \verb+Python+ oferece algumas funções para a conversão de números inteiros em base decimal para uma base dada. Por exemplo, temos:
-\begin{verbatim}
->>> print(bin(9))
-0b1001
->>> print(oct(111))
-0157
->>> print(hex(48826))
-0xbeba
-\end{verbatim}
-\end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{obs}
   Uma maneira de converter um número dado em uma base $b_1$ para uma base $b_2$ é fazer em duas partes: primeiro converter o número dado na base $b_1$ para base decimal e depois converter para a base $b_2$.
@@ -336,23 +248,6 @@ Obtenha a representação do número $125,58\bar{3}$ na base $6$.
   \end{equation}
 logo $125 = (325)_6$.
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-Estes cálculos podem ser feitos no \verb+Scilab+ com o auxílio das funções \verb'modulo' e \verb'int'. A primeira calcula o resto da divisão entre dois números, enquanto que a segunda retorna a parte inteira de um número dado. No nosso exemplo, temos:
-\begin{verbatim}
--->q = 125, d0 = modulo(q,6)
--->q = int(q/6), d1 = modulo(q,6)
--->q = int(q/6), d2 = modulo(q,6)
-\end{verbatim}
-Verifique!
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 Estes cálculos podem ser feitos no \verb+GNU Octave+ com o auxílio das funções \verb'mod' e \verb'fix'. A primeira calcula o resto da divisão entre dois números, enquanto que a segunda retorna a parte inteira de um número dado. No nosso exemplo, temos:
 \begin{verbatim}
 >> x = 125
@@ -368,21 +263,7 @@ d =  3
 x = 0
 \end{verbatim}
 Verifique!
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Estes cálculos podem ser feitos em \verb+Python+ com o auxílio do operador \verb+%+ e da função \verb'int'. Com o primeiro calculamos o resto da divisão entre dois números, enquanto que a segunda retorna a parte inteira de um número dado. No nosso exemplo, temos:
-\begin{verbatim}
->>> q = 125; d0 = (q % 6); print(q,d0)
->>> q = int(q/6); d1 = (q % 6); print(q,d1)
->>> q = int(q/6); d2 = (q % 6); print(q,d2)
-\end{verbatim}
-Verifique!
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 
 {\bf Conversão da parte fracionária.} Para converter $0,58\bar{3}$ para a base $6$, fazemos sucessivas multiplicações por $6$ como segue:
   \begin{equation}
@@ -394,17 +275,7 @@ Verifique!
     \end{split}
   \end{equation}
 logo $0,58\overline{3} = (0,33)_6$.
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-As contas feitas aqui, também podem ser computadas no \verb+Scilab+. Você sabe como?
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 No \verb+GNU Octave+, podemos computar esta conversão da parte fracionária da seguinte forma
 \begin{verbatim}
 >> x = 0.58 + 1/3/100
@@ -418,23 +289,7 @@ x =  0.50000
 d =  3
 x = 0
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Em \verb+Python+, é possível computar esta conversão de valores fracionários da seguinte maneira:
-\begin{verbatim}
->>> x = 0.58 + 1/3/100; print("x = {}".format(x))
-x = 0.5833333333333333
->>> d = int(6*x); x = round(6*x,1) - d; print("d = {}, x = {}".format(d, x))
-d = 3, x = 0.5
->>> d = int(6*x); x = round(6*x,1) - d; print("d = {}, x = {}".format(d, x))
-d = 3, x = 0.0
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 \end{resol}
 
 \begin{exeresol}
@@ -573,40 +428,6 @@ onde $(M)_b = (d_0,d_{-1}d_{-2}d_{-3}\cdots)_b$, com $d_{0}\neq 0$\footnote{Em a
   \end{itemize}
 \end{ex}
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{obs}
-No \verb+Scilab+, a representação em ponto flutuante decimal com $8$ dígitos é a padrão, por exemplo:
-\begin{verbatim}
--->-%pi
- ans  =
-  - 3.14159D+00
-\end{verbatim}
-Podemos controlar a impressão de números com o comando \verb+format+. Por exemplo:
-\begin{verbatim}
--->format('v',12); -%pi
- ans  =
-  - 3.141592654
--->format('e',12); -%pi
- ans  =
-  - 3.14159D+00
-\end{verbatim}
-Observamos que, no primeiro caso, obtemos a representação em ponto flutuante decimal com $10$ dígitos ($2$ posições são reservadas para o sinal e o ponto), enquanto que na segunda obtemos a representação em notação científica normalizada com $6$ dígitos ($6$ posições são reservadas para o sinal, ponto, símbolo $D := 10$ e expoente). Alternativamente, podemos usar o comando \verb+printf+, por exemplo:
-\begin{verbatim}
--->printf('%1.5f',-%pi)
--3.14159
--->printf('%1.5e',-%pi)
--3.14159e+00
-\end{verbatim}
-\end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{obs}
 No $\verb+GNU Octave+$, podemos controlar a impressão de números usando o comando \verb+printf+. Por exemplo:
 \begin{verbatim}
@@ -617,24 +438,6 @@ No $\verb+GNU Octave+$, podemos controlar a impressão de números usando o coma
 \end{verbatim}
 No primeiro caso, obtemos a representação em ponto flutuante decimal com $6$ dígitos do número $-\pi$. No segundo caso, obtemos a representação em notação científica normalizada com $6$ dígitos.
 \end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-\begin{obs}
-Em $\verb+Python+$, podemos controlar a impressão de números usando o comando \verb+print+. Por exemplo:
-\begin{verbatim}
->>> print(f"{-np.pi:1.5f}")
--3.14159
->>> print(f"{-np.pi:1.5e}")
--3.14159e+00
-\end{verbatim}
-No primeiro caso, obtemos a representação em ponto flutuante decimal com $6$ dígitos do número $-\pi$. No segundo caso, obtemos a representação em notação científica normalizada com $6$ dígitos.
-\end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Exercícios resolvidos}
 
@@ -667,29 +470,7 @@ No primeiro caso, obtemos a representação em ponto flutuante decimal com $6$ d
 \begin{exer}
   Use o computador para verificar as respostas do Exercício~\ref{exer:notacao_cientifica_normalizada}.
 \end{exer}
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{resp}
-No \verb+Scilab+, temos:
-\begin{verbatim}
--->printf("%1.7e", 299792.458)
-2.9979458e+04
--->printf("%1.5e", 66.2607)
-6.62607e+01
--->printf("%1.3e", 0.6674)
-6.674e-01
--->printf("%1.5e", 9806.65e1)
-9.80665e+04
-\end{verbatim}
-\end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 \begin{resp}
 No \verb+GNU Octave+, temos:
 \begin{verbatim}
@@ -703,27 +484,6 @@ No \verb+GNU Octave+, temos:
 9.80665e+04
 \end{verbatim}
 \end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-\begin{resp}
-Em \verb+Python+, temos:
-\begin{verbatim}
->>> print("%1.7e" % 299792.458)
-2.9979458e+04
->>> print("%1.5e" % 66.2607)
-6.62607e+01
->>> print("%1.3e" % 0.6674)
-6.674e-01
->>> print("%1.5e" % 9806.65e1)
-9.80665e+04
-\end{verbatim}
-\end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Representação decimal finita}
@@ -783,28 +543,7 @@ caso $d_{k}$ seja par e, caso contrário, por
   \item $x=1,50$ arredonda-se para o inteiro $2$.
   \item $x=2,50$ arredonda-se para o inteiro $3$.
   \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-No \verb+Scilab+, temos:
-\begin{verbatim}
--->round(1.49)
- ans  =
-    1.
--->round(1.50)
- ans  =
-    2.
--->round(2.50)
- ans  =
-    3.
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 \begin{verbatim}
 >> round(1.49)
 ans =  1
@@ -813,22 +552,7 @@ ans =  2
 >> round(2.50)
 ans =  3
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%%%%
-\ifispython
-\begin{verbatim}
->>> round(1.49)
-1.0
->>> round(1.50)
-2.0
->>> round(2.50)
-3.0
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
+
 \end{obs}
 
 \begin{ex} Represente os números $x_1 = 0,567$, $x_2 = 0,233$, $x_3 = -0,675$ e $x_4 = 0,314159265 \ldots \times 10^1$ com dois dígitos significativos por truncamento e arredondamento.
@@ -839,30 +563,7 @@ ans =  3
     \begin{equation}
       x_1=0,56,\quad x_2=0,23,\quad x_3=-0,67\quad\mbox{e}\quad x_4 = 3,1.
     \end{equation}
-%%%%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-No \verb+Scilab+, podemos obter a representação de $x_3 = -0,675$ fazendo:
-\begin{verbatim}
--->format('v',5)
--->-int(0.675*1e2)/1e2
- ans  =
-  - 0.67
-\end{verbatim}
-e, em notação normalizada, temos:
-\begin{verbatim}
--->format('e',8)
--->-int(0.675*1e2)/1e2
- ans  =
-  - 6.7D-01
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 No \verb+GNU Octave+, podemos obter a representação de $x_3 = -0,675$ fazendo:
 \begin{verbatim}
 >> printf("%1.2f\n", ceil(-0.675*1e2)/1e2)
@@ -873,51 +574,7 @@ e, em notação normalizada, temos:
 >> printf("%1.1e\n", ceil(-0.675*1e2)/1e2)
 -6.7e-01
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Em \verb+Python+, podemos obter a representação de $x_3 = -0,675$ fazendo:
-\begin{verbatim}
->>> int(-0.675*1e2)/1e2
-\end{verbatim}
-e, em notação normalizada, temos:
-\begin{verbatim}
->>> print("{:1.1e}".format(int(-0.675*1e2)/1e2))
--6.7e-01
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
-\item Por arredondamento:
-\begin{equation}
-   x_1=0,57;\quad x_2=0,23;\quad x_3=-0,68\quad\mbox{e}\quad x_4 = 3,1.
-\end{equation}
-%%%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-No \verb+Scilab+, a representação de números por arredondamento por proximidade com desempate par é o padrão. Assim, para obtermos a representação desejada de $x_3 = 0,675$ fazemos:
-\begin{verbatim}
--->format('v',5)
--->-0.675
- ans  =
-  - 0.68
-\end{verbatim}
-e, em notação normalizada, temos:
-\begin{verbatim}
--->format('e',8)
--->-0.675
- ans  =
-  - 6.8D-01
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 Em \verb+GNU Octave+, a representação de números por arredondamento por proximidade com desempate par é o padrão. Assim, para obtermos a representação desejada de $x_3 = 0,675$ fazemos:
 \begin{verbatim}
 >> printf("%1.2f\n", -0.675)
@@ -928,24 +585,7 @@ e, em notação normalizada, temos:
 >> printf("%1.1e\n", -0.675)
 -6.8e-01
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Em \verb+Python+, a representação de números por arredondamento é o padrão. Assim, para obtermos a representação desejada de $x_3 = 0,675$ fazemos:
-\begin{verbatim}
->>> print("{:1.2f}".format(-0.675))
--0.68
-\end{verbatim}
-e, em notação normalizada:
-\begin{verbatim}
->>> print("{:1.1e}".format(-0.675))
--6.8e-01
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
+
   \end{itemize}
 \end{sol}
 
@@ -984,33 +624,6 @@ e, em notação normalizada:
   (a)~$1,2$; (b)~$1,2$; (c)~$2,4$; (d)~$-2,4$.
 \end{resp}
 
-%%%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{exer}
-  O \verb+Scilab+ usa arredondamento por proximidade com desempate par
-  como padrão. Assim sendo, por exemplo
-\begin{verbatim}
---> printf('%1.1e\n', 1.25)
-1.2e+00
-\end{verbatim}
-  Agora:
-\begin{verbatim}
---> printf('%1.1e\n', 2.45)
-2.5e+00
-\end{verbatim}
-  Não deveria ser $2.4$? Explique o que está ocorrendo.
-\end{exer}
-\begin{resp}
-  \construirResp
-\end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{exer}
   O \verb+GNU Octave+ usa arredondamento por proximidade com desempate
   par como padrão. Assim sendo, por exemplo
@@ -1028,56 +641,13 @@ e, em notação normalizada:
 \begin{resp}
   \construirResp
 \end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%%%
-\ifispython
-\begin{exer}
-  O \verb+Python+ usa arredondamento por proximidade com desempate par
-  como padrão. Assim sendo, por exemplo
-\begin{verbatim}
->>> print('{:1.1e}'.format(1.25))
-1.2e+00
-\end{verbatim}
-  Agora:
-\begin{verbatim}
->>> print('{:1.1e}'.format(2.45)
-2.5e+00
-\end{verbatim}
-  Não deveria ser $2.4$? Explique o que está ocorrendo.
-\end{exer}
-\begin{resp}
-  \construirResp
-\end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 \section{Representação de números em máquina}\index{representação!de números em máquina}
 
 Os computadores, em geral, usam a base binária para representar os números, onde as posições, chamadas de bits, assumem as condições ``verdadeiro'' ou ``falso'', ou seja, $1$ ou $0$, respectivamente. Os computadores representam os números com uma quantidade fixa de bits, o que se traduz em um conjunto finito de números representáveis. Os demais números são tomados por proximidade àqueles conhecidos, gerando erros de arredondamento.\index{erros!de arredondamento} Por exemplo, em aritmética de computador, o número $2$ tem representação exata, logo $2^2=4$, mas $\sqrt{3}$ não tem representação finita, logo $(\sqrt{3})^2\neq 3$.
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-Veja isso no \verb+Scilab+:
-\begin{verbatim}
--->2^2 == 4
- ans  =
-  T
--->sqrt(3)^2 == 3
- ans  =
-  F
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 Veja isso no \verb+GNU Octave+:
 \begin{verbatim}
 >> 2^2 == 4
@@ -1085,21 +655,7 @@ ans =  1
 >> sqrt(3)^2 == 3
 ans = 0
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Veja isso em \verb+Python+:
-\begin{verbatim}
->>> 2**2 == 4
-True
->>> np.sqrt(3)**2 == 3
-False
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 
 \subsection{Números inteiros}\index{representação!números inteiros}
 
@@ -1126,10 +682,6 @@ Assim, é possível representar números inteiros entre $2^n-1$ e $0$, sendo
 \end{split}
 \end{equation}
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
 \begin{ex}
   No \verb+Scilab+,
 \begin{verbatim}
@@ -1139,8 +691,7 @@ Assim, é possível representar números inteiros entre $2^n-1$ e $0$, sendo
    ans = 254
 \end{verbatim}
 \end{ex}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 
 \subsubsection{Representação com bit de sinal}\index{representação de números!inteiros!bit de sinal}
 O bit mais significativo (o primeiro à esquerda) representa o sinal: por convenção, $0$ significa positivo e $1$ significa negativo. Um registro com $n$ bits da forma
@@ -1211,10 +762,6 @@ Em um registro com $8$ bits, teremos os números
   \end{split}
 \end{equation}
 
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 O \verb+GNU Octave+ trabalha com representação complemento de 2 de números inteiros. O comando \verb+bitunpack+ mostra o barramento de um número dado, por exemplo:
 \begin{verbatim}
 >> bitunpack(int8(3))
@@ -1228,8 +775,7 @@ O comando \verb+bitpack+ converte um barramento para o número em decimal, por e
 >> bitpack(logical([1 1 0 0 0 0 0 0]),'int8')
 ans = 3
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 \end{ex}
 
 \subsection{Sistema de ponto fixo}\index{sistema numérico!de ponto fixo}
@@ -1317,10 +863,6 @@ representa o número
 \end{equation}
 \end{ex}
 
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{obs}
   No \verb+GNU Octave+, podemos usar os comandos \verb+bitpack+ e \verb+bitunpack+ transformar um registro de ponto flutuante de $64$ \emph{bits} em decimal e vice-versa. Entretanto, um tal registro no \verb+GNU Octave+ tem a seguinte estrutura
   \begin{equation}
@@ -1336,8 +878,7 @@ O que podemos verificar com o comando
 ans =  3.2500
 \end{verbatim}
 \end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 
 \subsubsection{O expoente deslocado}
 
@@ -1389,25 +930,6 @@ quando $s=0$, $c=2046$ e $M=(1.1111~1111\cdots~1111)_2=2-2^{-52}$, ou seja,
 MAXR=(2-2^{-52})\times 2^{2046-1023} \approx 2^{1024}\approx0.17977\times 10^{309}.
 \end{equation}
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{obs}
-  O menor número positivo, o maior número e o menor número subnormal representáveis  no \verb+Scilab+ são:
-\begin{verbatim}
--->MINR=number_properties('tiny')
--->MAXR=number_properties('huge')
--->number_properties('tiniest')
-\end{verbatim}
-Outras informações sobre a representação em ponto flutuante podem ser obtidas com \verb+help number_properties+.
-\end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{obs}
   No \verb+GNU Octave+, podemos obter o maior e o menor \verb+double+ positivo não nulo com os comandos:
 \begin{verbatim}
@@ -1417,25 +939,7 @@ ans =   1.7977e+308
 ans =   2.2251e-308
 \end{verbatim}
 \end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-\begin{obs}
-  Em \verb+Python+, podemos podemos obter o maior e o menor \verb+double+ positivo não nulo com os comandos:
-\begin{verbatim}
->>> import sys
->>> sys.float_info.max
-1.7976931348623157e+308
->>> sys.float_info.min
-2.2250738585072014e-308
-\end{verbatim}
-Outras informações sobre a representação em ponto flutuante podem ser obtidas com \verb+sys.float_info+.
-\end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 
 \subsubsection{Casos especiais}
 O \emph{zero} é um caso especial representado pelo registro
@@ -1470,27 +974,6 @@ O \emph{épsilon de máquina}, $\epsilon_{mach}=\epsilon$, é definido de forma 
 Assim, $\epsilon = 2^{-52}$.
 \end{ex}
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{obs}
-  No \verb+Scilab+, o épsilon de máquina é representado pela constante \verb+%eps+. Observe os seguintes resultados:
-\begin{verbatim}
--->1 + 1e-16 == 1
- ans  =
-  T
--->1 + %eps == 1
- ans  =
-  F
-\end{verbatim}
-\end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{obs}
   No \verb+GNU Octave+, o épsilon de máquina é representado pela constante \verb+eps+. Observe os seguintes resultados:
 \begin{verbatim}
@@ -1500,28 +983,7 @@ ans =  1
 ans = 0
 \end{verbatim}
 \end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-  Em \verb+Python+, podemos obter o épsilon de máquina com os comandos:
-\begin{verbatim}
->>> import sys
->>> sys.float_info.epsilon
-2.220446049250313e-16
-\end{verbatim}
-Observe, também, os seguintes resultados:
-\begin{verbatim}
->>> eps = sys.float_info.epsilon
->>> 1 + 1e-16 == 1
-True
->>> 1 + eps == 1
-False
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 
 \subsection{Distribuição dos números}
 Utilizando uma máquina em ponto flutuante, temos um número finito de números que podemos representar.
@@ -1530,22 +992,7 @@ Um número muito pequeno geralmente é aproximado por zero (\emph{underflow}) e 
 
 Se tentarmos armazenar um número que não é representável, devemos utilizar o número mais próximo, gerando os erros de arredondamento.
 
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{obs}
-  O chamado modo de exceção de ponto flutuante é controlado pela função \verb+ieee+. O padrão do \verb+Scilab+ é \verb+ieee(0)+. Estude os seguintes resultados das seguintes operações usando os diferentes modos de exceção:
-\begin{verbatim}
--->2*number_properties('huge'), 1/2^999, 1/0, 1/-0
-\end{verbatim}
-\end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 \begin{obs}
   Veja como o \verb+GNU Octave+ se comporta nos seguintes casos de exceção:
 \begin{verbatim}
@@ -1564,8 +1011,7 @@ ans = Inf
 ans = 0
 \end{verbatim}
 \end{obs}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 
 \subsection*{Exercícios}
 
@@ -1598,10 +1044,6 @@ ans = 0
 \end{resp}
 
 
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{exer}
   Usando a representação complemento de dois de números inteiros com $8$ \emph{bits} no \verb+GNU Octave+, escreva o número decimal que corresponde aos seguintes barramentos:
   \begin{enumerate}[a)]
@@ -1613,13 +1055,7 @@ ans = 0
 \begin{resp}
   a)~$70$; b)~$-72$; c)~$72$.
 \end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{exer}
   Usando a representação complemento de dois de números inteiros com $16$ \emph{bits} no \verb+GNU Octave+, escreva o número decimal que corresponde aos seguintes barramentos:
   \begin{enumerate}[a)]
@@ -1631,8 +1067,7 @@ ans = 0
 \begin{resp}
   a)~$17990$; b)~$-18248$; c)~$18248$.
 \end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{exer}
   Usando a representação de ponto flutuante com $64$ \emph{bits}, escreva o número decimal que corresponde aos seguintes barramentos:
@@ -1649,11 +1084,6 @@ ans = 0
   Explique a diferença entre o sistema de ponto fixo e ponto flutuante.
 \end{exer}
 
-
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{exer}
   Usando a representação de \verb+double+ no \verb+GNU Octave+, escreva o número decimal que corresponde aos seguintes barramentos:
   \begin{enumerate}[a)]
@@ -1664,36 +1094,7 @@ ans = 0
 \begin{resp}
   a)~$3,75$; b)~$-5,75$.
 \end{resp}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-\begin{exer}Considere a seguinte rotina escrita para ser usada no Scilab:
- \begin{verbatim}
-     x = 1
-     while x + 1 > x
-         x = x + 1
-     end
- \end{verbatim}
- Explique se esta rotina finaliza em tempo finito, em caso afirmativo calcule a ordem de grandeza do tempo de execução supondo que cada passo do laço demore $10^{-7}s$. Justifique sua reposta.
- \end{exer}
-\begin{resp}
- Devido à precisão finita do sistema de numeração, o laço para quando x for suficientemente grande em comparação a 1 a ponto de x+1 ser aproximado para 1. Isso acontece quando 1 é da ordem do épsilon de máquina em relação a x, isto é, quando $x\approx 2/\%eps$. O tempo de execução fica em torno de 28 anos.
-\end{resp}
-
- \fi
-%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
 \begin{exer}Considere a seguinte rotina escrita para ser usada no \verb+GNU Octave+:
  \begin{verbatim}
      x=1
@@ -1706,26 +1107,7 @@ ans = 0
 \begin{resp}
  Devido à precisão finita do sistema de numeração, o laço para quando x for suficientemente grande em comparação a 1 a ponto de x+1 ser aproximado para 1. Isso acontece quando 1 é da ordem do épsilon de máquina em relação a x, isto é, quando $x\approx 2/\%eps$. O tempo de execução fica em torno de 28 anos.
 \end{resp}
- \fi
-%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-\begin{exer}Considere a seguinte rotina escrita para ser usada no \verb+Python+:
- \begin{verbatim}
-     x = 1.0
-     while x + 1 > x:
-         x = x + 1
- \end{verbatim}
- Explique se esta rotina finaliza em tempo finito, em caso afirmativo calcule a ordem de grandeza do tempo de execução supondo que cada passo do laço demore $10^{-7}s$. Justifique sua reposta.
- \end{exer}
-\begin{resp}
- Devido à precisão finita do sistema de numeração, o laço para quando x for suficientemente grande em comparação a 1 a ponto de x+1 ser aproximado para 1. Isso acontece quando 1 é da ordem do épsilon de máquina em relação a x, isto é, quando $x\approx 2/\%eps$. O tempo de execução fica em torno de 28 anos.
-\end{resp}
- \fi
-%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Tipos de erros}\index{erros}
@@ -2246,24 +1628,7 @@ onde $\alpha$ é um número entre $0$ e $1$ e $V_0$ é tensão nominal em volts.
     x^{(n+1)} &=& 4x^{(n)}-1,\quad n=1, 2, \ldots
   \end{eqnarray}
 Observe que $x^{(1)}=\frac{1}{3}$, $x^{(2)}=4\cdot \frac{1}{3}-1=\frac{1}{3}$, $x^{(3)}=\frac{1}{3}$, ou seja, temos uma sequência constante igual a $\frac{1}{3}$. No entanto, ao calcularmos no computador, usando o sistema de numeração \verb+double+, a sequência obtida não é constante e, de fato, diverge.
-%%%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-Faça o teste no \verb+Scilab+, colocando:
-\begin{verbatim}
--->x = 1/3
-\end{verbatim}
-e itere algumas vezes a linha de comando:
-\begin{verbatim}
--->x = 4*x-1
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 Faça o teste no \verb+GNU Octave+, colocando:
 \begin{verbatim}
 >> x = 1/3
@@ -2272,22 +1637,7 @@ e itere algumas vezes a linha de comando:
 \begin{verbatim}
 >> x = 4*x-1
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Faça o teste em \verb+Python+, colocando:
-\begin{verbatim}
->>> x = 1/3; x
-\end{verbatim}
-e itere algumas vezes a linha de comando:
-\begin{verbatim}
->>> x = 4*x-1; x
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
+
 
 Para compreender o que acontece, devemos levar em consideração que o número $\frac{1}{3}=0,\overline{3}$ possui um representação infinita tanto na base decimal quanto na base binária. Logo, sua representação de máquina inclui um erro de arredondamento. Seja $\epsilon$ a diferença entre o valor exato de $\frac{1}{3}$ e sua representação de máquina, isto é, $\tilde{x}^{(1)}=\frac{1}{3}+\epsilon$. A sequência efetivamente calculada no computador é:
 \begin{eqnarray}
@@ -2339,7 +1689,7 @@ Um resultado bem conhecido do cálculo nos diz que o limite de \eqref{def_lim} q
 Sabemos também que a sequência produzida por \eqref{def_lim} é crescente, isto é:
 \begin{equation} \left(1+\frac{1}{1}\right)^1< \left(1+\frac{1}{2}\right)^2< \left(1+\frac{1}{3}\right)^3 < \cdots  \end{equation}
 
-No entanto, quando calculamos essa expressão no \ifisscilab\verb+Scilab+\fi\ifispython\verb+Python+\fi\ifisoctave\verb+Octave+\fi, nos defrontamos com o seguinte resultado:
+No entanto, quando calculamos essa expressão no \verb+Julia+, nos defrontamos com o seguinte resultado:
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}\hline &&&&\\[-0.3cm]
 $n$ & $\left(1+\frac{1}{n}\right)^n$&$~~~~$&$n$ & $\left(1+\frac{1}{n}\right)^n$\\ &&&&\\[-0.3cm]\hline\\[-0.3cm]
@@ -2365,45 +1715,13 @@ Para compreendermos melhor por que existe um limiar $N$ que, quando atingido tor
 n~\to ~1/n ~\to ~1+1/n ~\to ~(1+1/n)^n
 \end{equation}
 Devido ao limite de precisão da representação de números em ponto flutuante, existe um menor número representável que é maior do que 1. Este número é $1 + $\verb+eps+, onde \verb+eps+ é chamado de \emph{épsilon de máquina} e é o menor número que somado a 1 produz um resultado superior a 1 no sistema de numeração usado. O épsilon de máquina no sistema de numeração \emph{double} vale aproximadamente $2,22\times 10^{-16}$.
-%%%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-No \verb+Scilab+, o épsilon de máquina é a constante \verb+eps+. Observe que:
-\begin{verbatim}
--->1+%eps
- ans  =
-    1.0000000000000002220446
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 No \verb+GNU Octave+, o épsilon de máquina é a constante \verb+eps+. Observe que:
 \begin{verbatim}
 >> printf('%1.25f\n', 1+eps)
 1.0000000000000002220446049
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Em \verb+Python+ podemos obter o épsilon de máquina com o seguinte comando \verb+numpy+:
-\begin{verbatim}
->>> eps = np.finfo(float).eps
->>> print(eps)
-2.22044604925e-16
->>> 1+eps == 1
-False
->>> 1+eps
-1.0000000000000002
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%%%
+
 Quando somamos a $1$ um número positivo inferior ao épsilon de máquina, obtemos o número 1. Dessa forma, o resultado obtido pela operação de ponto flutuante $1+n$ para $0<n<2,22 \times 10^{-16}$ é 1.
 
 Portanto, quando realizamos a sequência de operações dada em \eqref{seq_oper}, toda informação contida no número $n$ é perdida na soma com $1$ quando $1/n$ é menor que o épsilon de máquina, o que ocorre quando $n>5\times 10^{15}$. Assim, $(1+1/n)$ é aproximado para $1$ e a última operação se resume a $1^n$, o que é igual a $1$ mesmo quando $n$ é grande.
@@ -2417,37 +1735,7 @@ compare o desempenho numérico desta sequência de operações para valores pequ
 n ~\to ~1+n ~\to ~(1+n)-1.
 \end{equation}
 Finalmente, notamos que quando tentamos calcular $\left(1+\frac{1}{n}\right)^n$ para $n$ grande, existe perda de significância no cálculo de $1+1/n$.
-%%%%%%%%%%%%%%%%%%%%
-% scilab
-%%%%%%%%%%%%%%%%%%%%
-\ifisscilab
-Para entendermos isso melhor, vejamos o que acontece no \verb+Scilab+ quando $n=7\times 10^{13}$:
-\begin{verbatim}
--->n=7e13
- n  =
-     7.000000000000000000D+13
--->1/n
- ans  =
-     1.428571428571428435D-14
--->y=1+1/n
- y  =
-    1.000000000000014211D+00
-\end{verbatim}
-Observe a perda de informação ao deslocar a mantissa de $1/n$. Para evidenciar o fenômeno, observamos o que acontece quando tentamos recalcular $n$ subtraindo $1$ de $1+1/n$ e invertendo o resultado:
-\begin{verbatim}
--->y-1
- ans  =
-     1.421085471520200372D-14
--->1/(y-1)
- ans  =
-     7.036874417766400000D+13
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% octave
-%%%%%%%%%%%%%%%%%%%%
-\ifisoctave
+
 Para entendermos isso melhor, vejamos o que acontece no \verb+GNU Octave+ quando $n=7\times 10^{13}$:
 \begin{verbatim}
 >> format('long')
@@ -2465,32 +1753,6 @@ ans =    1.42108547152020e-14
 >> 1/(y-1)
 ans =  70368744177664
 \end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-% python
-%%%%%%%%%%%%%%%%%%%%
-\ifispython
-Para entendermos isso melhor, vejamos o que acontece no \verb+Python+ quando $n=7\times 10^{13}$:
-\begin{verbatim}
->>> n = 7e13; print(f"{n:1.15e}")
-7.000000000000000e+13
->>> n = 7e13; print(f"{n:1.20e}")
-7.00000000000000000000e+13
->>> print(f"{1/n:1.20e}")
-1.42857142857142843451e-14
->>> y = 1 + 1/n; print(f"{y:1.20e}")
-1.00000000000001421085e+00
-\end{verbatim}
-Observe a perda de informação ao deslocar a mantissa de $1/n$. Para evidenciar o fenômenos, observamos o que acontece quando tentamos recalcular $n$ subtraindo $1$ de $1+1/n$ e invertendo o resultado:
-\begin{verbatim}
->>> print(f"{(y-1):1.20e}")
-1.42108547152020037174e-14
->>> print(f"{(1/(y-1)):1.20e}")
-7.03687441776640000000e+13
-\end{verbatim}
-\fi
-%%%%%%%%%%%%%%%%%%%%
 \end{ex}
 
 \begin{ex}[Analogia da balança] Observe a seguinte comparação interessante que pode ser feita para ilustrar os sistemas de numeração com ponto fixo e flutuante: o sistema de ponto fixo é como uma balança cujas marcas estão igualmente espaçadas; o sistema de ponto flutuante é como uma balança cuja distância entre as marcas é proporcional à massa medida. Assim, podemos ter uma balança de ponto fixo cujas marcas estão sempre distanciadas de $100$g ($100$g, $200$g, $300$g, ..., $1$kg, $1,1$kg,...) e outra balança de ponto flutuante cujas marcas estão distanciadas sempre de aproximadamente um décimo do valor lido ($100$g, $110$g, $121$g, $133$g, ..., $1$kg, $1,1$kg, $1,21$kg, ...) A balança de ponto fixo apresenta uma resolução baixa para pequenas medidas, porém uma resolução alta para grandes medidas. A balança de ponto flutuante distribui a resolução de forma proporcional ao longo da escala.

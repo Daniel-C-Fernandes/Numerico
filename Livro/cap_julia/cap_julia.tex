@@ -25,6 +25,7 @@ Para mais informações, consulte:
 \item Página oficial da linguagem Julia: \url{https://julialang.org/}
 \item Manual Julia: \url{https://docs.julialang.org/en/v1/manual/getting-started/}
 \item GitHub do Professor Daniel: \url{https://github.com/Daniel-C-Fernandes/Numerico/blob/main/Mini-curso-Julia.ipynb}
+\item Julia for Data science: \url{https://juliadatascience.io/pt/}
 \item Julia Academy: \url{https://juliaacademy.com/}
 \item GitHub Julia: \url{https://github.com/JuliaLang/julia}
 \item Introdução: \url{https://julia.vento.eng.br/}
@@ -153,7 +154,54 @@ Hello world!!
 
 \section{Elementos da linguagem}\index{Julia!elementos da linguagem}
 
-\verb+Julia+ é uma linguagem de alto nível, interpretada e dinâmica. Uma variável é criada quando um valor é atribuído a ela. Por exemplo:
+\verb+Julia+ é uma linguagem de alto nível de tipagem dinâmica, ou seja, uma variável é criada quando um valor é atribuído a ela, não sendo necessário especificar explicitamente cada tipo de variável, \verb+Julia+ vai inferir o tipo de cada variável por você. Porém, também é possível especificar a declaração da variável a ser criada, se for desejável.
+
+\subsection{Variáveis}
+
+Variáveis são valores armazenados pelo computador atrelados a um nome específico, para seja possível recuperar ou alterar seu valor posteriormente. 
+
+Alguns tipos de variáveis em \verb+Julia+:
+
+\begin{itemize}
+\item Números inteiros: Int64
+\item Números reais: Float64
+\item Matrizes inteiras: Matrix\{Int64\}
+\item Matrizes reais: Matrix\{Float64\}
+\item Booleanas: Bool
+\item Strings: String
+\end{itemize}
+
+Por padrão, números são armazenados usando 64 bits, sendo possível aumentar ou reduzir a precisão, utilizando os tipos Int8 ou Int128, por exemplo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Criamos novas variáveis escrevendo o nome da variável à esquerda e seu valor à direita, e no meio usamos o operador de atribuição =.
+
+Vejamos alguns exemplos:
 
 \begin{lstlisting}
 julia> x = 1
@@ -161,6 +209,13 @@ julia> x = 1
 julia> y = x * 2.0
 2.0
 \end{lstlisting}
+
+
+
+variaveis com emogi
+
+
+
 
 a variável \verb+x+ recebe o valor \verb+int+ $1$ e, logo após, na segunda linha de comando, a variável \verb+y+ recebe o valor \verb+double+ $2$. Observamos que o símbolo \verb+=+ significa o operador de atribuição não o de igualdade. O operador lógico de igualdade no \verb+Julia+ é \verb+==+. Veja os seguintes comandos:
 
@@ -184,17 +239,231 @@ julia> print(x)
 1
 \end{lstlisting}
 
+
+
+
+
+Utilizando Julia como calculadora....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Repositórios}
+
+Tartaruga 
+
+
+
+
+
+
+\section{Estruturas de ramificação e repetição}\index{Julia!ramificação e repetição}
+
+A linguagem \verb+Julia+ contém estruturas de repetição e ramificação padrões de linguagens estruturadas.
+
+\subsection{A instrução de ramificação ``if''}\index{Julia!if}
+
+A instrução ``if'' permite executar um pedaço do código somente se uma dada condição for satisfeita.
+
+\begin{ex}
+  Veja o seguinte código Julia:
+\begin{lstlisting}
+#!/usr/bin/env Julia
+# -*- coding: utf-8 -*-
+
+i = 2
+if (i == 1):
+    print("Olá!")
+elif (i == 2):
+    print("Hallo!")
+elif (i == 3):
+    print("Hello!")
+else:
+    print("Ça Va!")
+\end{lstlisting}
+Qual é a saída apresentada pelo código? Por quê?
+\end{ex}
+
+Observamos que, em \verb+Julia+, a identação é obrigatória, pois é ela que defini o escopo da instrução.
+
+\subsection{A instrução de repetição ``for''}\index{Julia!for}
+
+A instrução \verb+for+ permite que um pedaço de código seja executado repetidamente.
+
+\begin{ex}
+  Veja o seguinte código:
+\begin{lstlisting}
+for i in range(6):
+    print(i)
+\end{lstlisting}
+Qual é a saída deste código? Por quê?
+\end{ex}
+
+\begin{ex}
+  Veja o seguinte código:
+\begin{lstlisting}
+import numpy as np
+for i in np.arange(1,8,2):
+    print(i)
+\end{lstlisting}
+Qual é a saída deste código? Por quê?
+\end{ex}
+
+\begin{ex}
+  Veja o seguinte código:
+\begin{lstlisting}
+for i in np.arange(10,0,-3):
+  print(i)
+\end{lstlisting}
+O que é mostrado no console do Julia?
+\end{ex}
+
+\begin{ex}
+  Veja o seguinte código:
+\begin{lstlisting}
+import numpy as np
+for i in np.arange(10,1,-3):
+    print(i)
+\end{lstlisting}
+O que é mostrado no console do Julia?
+\end{ex}
+
+\subsection{A instrução de repetição ``while''}\index{Julia!while}
+
+A instrução \verb+while+ permite que um pedaço de código seja executado repetidamente até que uma dada condição seja satisfeita.
+
+\begin{ex}
+Veja o seguinte código Julia:
+\begin{lstlisting}
+s = 0
+i = 1
+while (i <= 10):
+    s = s + i
+    i = i + 1
+\end{lstlisting}
+Qual é o valor de \verb+s+ ao final da execução? Por quê?
+\end{ex}
+
+\section{Funções}\index{Julia!funções}
+
+Além das muitas funções disponíveis em \verb+Julia+ (e os tantos muitos pacotes livres disponíveis), podemos definir nossas próprias funções. Para tanto, existe a instrução \verb+def+. Veja os seguintes exemplos:
+
+\begin{ex}
+  O seguinte código:
+\begin{lstlisting}
+def f(x):
+    return x + np.sin(x)
+\end{lstlisting}
+define a função $f(x) = x + \sen x$.
+
+Observe que $f(\pi) = \pi$. Confirme isso computando:
+\begin{lstlisting}
+>>> f(np.pi)
+\end{lstlisting}
+\end{ex}
+
+\begin{ex}
+  O seguinte código em \verb+Julia+:
+\begin{lstlisting}
+def h(x,y):
+    if (x < y):
+        return y - x
+    else:
+        return x - y
+\end{lstlisting}
+define a função:
+\begin{equation}
+  h(x,y) = \left\{
+    \begin{array}{ll}
+      y - x &, x < y\\
+      x - y &, x \geq y
+    \end{array}
+\right.
+\end{equation}
+\end{ex}
+
+\begin{ex}
+  O seguinte código:
+\begin{lstlisting}
+def J(x):
+    y = np.zeros((2,2))
+    y[0,0] = 2*x[0]
+    y[0,1] = 2*x[1]
+
+    y[1,0] = -x[1]*np.sin(x[0]*x[1])
+    y[1,1] = -x[0]*np.sin(x[0]*x[1])
+
+    return y
+\end{lstlisting}
+define a matriz jacobiana $J(x_1,x_2) := \frac{(f_1,f_2)}{(x_1,x_2)}$ da função:
+\begin{equation}
+  \pmb{f}(x_1,x_2) = (x_1^2 + x_2^2,~\cos(x_1x_2)).
+\end{equation}
+\end{ex}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Operações matemáticas elementares}\index{Julia!operações matemáticas}
 
 Em \verb+Julia+, os operadores matemáticos elementares são os seguintes:
-\begin{lstlisting}
+\begin{lstlisting}[mathescape=true]
   + # adição
   - # subtração
   * # multiplicação
   / # divisão de a por b
   \ # divisão de b por a
   % # Resto da divisão euclidiana
-  \div # Quociente inteiro da divisão euclidiana (alt + 246)
+  $\div$ # Quociente inteiro da divisão euclidiana (alt + 246)
   (ou \div + tab)
   ^ #potenciação
   // # Frações
@@ -424,149 +693,18 @@ array([[ 0.5,  0.5],
 \end{lstlisting}
 \end{ex}
 
-\section{Estruturas de ramificação e repetição}\index{Julia!ramificação e repetição}
 
-A linguagem \verb+Julia+ contém estruturas de repetição e ramificação padrões de linguagens estruturadas.
 
-\subsection{A instrução de ramificação ``if''}\index{Julia!if}
 
-A instrução ``if'' permite executar um pedaço do código somente se uma dada condição for satisfeita.
 
-\begin{ex}
-  Veja o seguinte código Julia:
-\begin{lstlisting}
-#!/usr/bin/env Julia
-# -*- coding: utf-8 -*-
 
-i = 2
-if (i == 1):
-    print("Olá!")
-elif (i == 2):
-    print("Hallo!")
-elif (i == 3):
-    print("Hello!")
-else:
-    print("Ça Va!")
-\end{lstlisting}
-Qual é a saída apresentada pelo código? Por quê?
-\end{ex}
 
-Observamos que, em \verb+Julia+, a identação é obrigatória, pois é ela que defini o escopo da instrução.
 
-\subsection{A instrução de repetição ``for''}\index{Julia!for}
 
-A instrução \verb+for+ permite que um pedaço de código seja executado repetidamente.
 
-\begin{ex}
-  Veja o seguinte código:
-\begin{lstlisting}
-for i in range(6):
-    print(i)
-\end{lstlisting}
-Qual é a saída deste código? Por quê?
-\end{ex}
 
-\begin{ex}
-  Veja o seguinte código:
-\begin{lstlisting}
-import numpy as np
-for i in np.arange(1,8,2):
-    print(i)
-\end{lstlisting}
-Qual é a saída deste código? Por quê?
-\end{ex}
 
-\begin{ex}
-  Veja o seguinte código:
-\begin{lstlisting}
-for i in np.arange(10,0,-3):
-  print(i)
-\end{lstlisting}
-O que é mostrado no console do Julia?
-\end{ex}
 
-\begin{ex}
-  Veja o seguinte código:
-\begin{lstlisting}
-import numpy as np
-for i in np.arange(10,1,-3):
-    print(i)
-\end{lstlisting}
-O que é mostrado no console do Julia?
-\end{ex}
-
-\subsection{A instrução de repetição ``while''}\index{Julia!while}
-
-A instrução \verb+while+ permite que um pedaço de código seja executado repetidamente até que uma dada condição seja satisfeita.
-
-\begin{ex}
-Veja o seguinte código Julia:
-\begin{lstlisting}
-s = 0
-i = 1
-while (i <= 10):
-    s = s + i
-    i = i + 1
-\end{lstlisting}
-Qual é o valor de \verb+s+ ao final da execução? Por quê?
-\end{ex}
-
-\section{Funções}\index{Julia!funções}
-
-Além das muitas funções disponíveis em \verb+Julia+ (e os tantos muitos pacotes livres disponíveis), podemos definir nossas próprias funções. Para tanto, existe a instrução \verb+def+. Veja os seguintes exemplos:
-
-\begin{ex}
-  O seguinte código:
-\begin{lstlisting}
-def f(x):
-    return x + np.sin(x)
-\end{lstlisting}
-define a função $f(x) = x + \sen x$.
-
-Observe que $f(\pi) = \pi$. Confirme isso computando:
-\begin{lstlisting}
->>> f(np.pi)
-\end{lstlisting}
-\end{ex}
-
-\begin{ex}
-  O seguinte código em \verb+Julia+:
-\begin{lstlisting}
-def h(x,y):
-    if (x < y):
-        return y - x
-    else:
-        return x - y
-\end{lstlisting}
-define a função:
-\begin{equation}
-  h(x,y) = \left\{
-    \begin{array}{ll}
-      y - x &, x < y\\
-      x - y &, x \geq y
-    \end{array}
-\right.
-\end{equation}
-\end{ex}
-
-\begin{ex}
-  O seguinte código:
-\begin{lstlisting}
-def J(x):
-    y = np.zeros((2,2))
-    y[0,0] = 2*x[0]
-    y[0,1] = 2*x[1]
-
-    y[1,0] = -x[1]*np.sin(x[0]*x[1])
-    y[1,1] = -x[0]*np.sin(x[0]*x[1])
-
-    return y
-\end{lstlisting}
-define a matriz jacobiana $J(x_1,x_2) := \frac{\p(f_1,f_2)}{\p(x_1,x_2)}$ da função:
-\begin{equation}
-  \pmb{f}(x_1,x_2) = (x_1^2 + x_2^2,~\cos(x_1x_2)).
-\end{equation}
-\end{ex}
 
 \section{Gráficos}\index{Julia!gráficos}
 
