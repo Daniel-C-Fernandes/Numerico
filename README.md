@@ -2,9 +2,19 @@
 
 <a href="https://github.com/Daniel-C-Fernandes/Numerico/blob/main/Livro/main.pdf">Cálculo Numérico</a>
 
+<hr>
+
+# Listas de Exercícios:
+
+<a href="https://github.com/Daniel-C-Fernandes/Numerico/blob/main/lista1.pdf">Lista 1 de exercícios de Cálculo Numérico</a>
+
+<a href="https://github.com/Daniel-C-Fernandes/Numerico/blob/main/lista2.pdf">Lista 2 de exercícios de Cálculo Numérico</a>
+
+<hr>
+
 # Linguagem JULIA
 
-Mini-curso Julia:
+Introdução à linguagem Julia (interativa: usando jupyter notebook):
 <a href="https://github.com/Daniel-C-Fernandes/Numerico/blob/main/Mini-curso-Julia.ipynb">Linguagem Julia</a>
 
 Tutorial de instalação:
