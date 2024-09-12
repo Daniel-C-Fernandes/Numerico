@@ -1,4 +1,4 @@
-# Livro de Cálculo Numérico
+# Apostila de Cálculo Numérico
 
 <a href="https://github.com/Daniel-C-Fernandes/Numerico/blob/main/Livro/main.pdf">Cálculo Numérico</a>
 
