@@ -9,18 +9,6 @@ Neste capítulo, construiremos aproximações numéricas para a solução de \em
 
 Em seguida, exploramos outra abordagem via \emph{iteração do ponto fixo}\index{iteração do ponto fixo}. Desta, obtemos o \emph{método de Newton}\footnote{Sir Isaac Newton, 1642 - 1727, matemático e físico inglês.}\index{método de Newton}, para o qual estudamos aplicações e critérios de convergência. Por fim, apresentamos o \emph{método das secantes}\index{método das secantes} como uma das possíveis variações do método de Newton.
 
-
-Ao longo do capítulo, apresentamos algumas computações com \verb+Python+. Nestas, assumiremos o que os seguintes módulos estão carregados:
-\begin{verbatim}
->>> import numpy as np
->>> import matplotlib.pyplot as plt
->>> import scipy as sp
->>> from scipy import optimize
-\end{verbatim}
-
-A segunda instrução carrega a biblioteca de computação científica \href{http://www.numpy.org/}{numpy} e a terceira carrega a biblioteca gráfica \href{https://matplotlib.org/}{matplotlib}.
-\fi
-
 \section{Existência e unicidade}\index{função!}\index{função!zero}
 
 O \emph{teorema de Bolzano}\footnote{Bernhard Placidus Johann Gonzal Nepomuk Bolzano, 1781 - 1848, matemático do Reino da Boêmia.}\index{teorema de!Bolzano} nos fornece condições suficientes para a existência do zero de uma função. Este é uma aplicação direta do \emph{teorema do valor intermediário}\index{teorema do valor intermediário}.
